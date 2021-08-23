@@ -1,0 +1,15 @@
+@import './theme.scss';
+.contentBg {
+  min-width:100%;
+  min-height: 100%;
+  min-width: 100vw;
+  min-height:100vh;
+  position: relative;
+}
+.container-md {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px;
+  position: relative;
+}

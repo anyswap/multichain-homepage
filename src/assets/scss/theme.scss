@@ -1,0 +1,9 @@
+$doubleSize: 16;
+@function size ($n) {
+  @if unit($n) == '%' {
+    @return $n
+  };
+  @if unit($n) == '' {
+    @return ($n / $doubleSize) + rem
+  }
+}
