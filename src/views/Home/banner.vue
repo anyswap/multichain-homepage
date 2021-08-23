@@ -29,10 +29,12 @@ $cardH: 400;
       h3 {
         font-size: size(48);
         line-height: size(72);
+        text-align: center;
       }
       p {
         font-size: size(36);
         line-height: size(54);
+        text-align: center;
       }
     }
   }

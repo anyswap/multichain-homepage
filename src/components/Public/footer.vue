@@ -36,7 +36,6 @@
           <div class="footer-item-info">
             <div class="logo"><img src="~@/assets/logo.svg" alt="logo"/></div>
             <div class="content">
-              Powered by Fusion DCRM
               © 2021 Anyswap. All rights reserved.
             </div>
             <ul class="list flex-sc">
