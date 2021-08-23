@@ -8,8 +8,8 @@
         </el-carousel-item>
       </el-carousel>
       <div class="carousel-btn flex-c">
-        <el-button type="primary">Enter App</el-button>
-        <el-button>Learn More</el-button>
+        <el-button type="primary" @click="methods('https://stable.anyswap.exchange/')">Enter App</el-button>
+        <el-button @click="openUrl('https://anyswap.net/')">Explorer</el-button>
       </div>
     </div>
   </div>
@@ -51,6 +51,11 @@ export default {
       bannerList: [
         {title: 'Decentralized cross-chain bridge protocol', content: 'An infrastructure designed for arbitrary assets cross-chain based on MPC  '}
       ]
+    }
+  },
+  methods: {
+    openUrl (url) {
+      window.open(url)
     }
   }
 }
