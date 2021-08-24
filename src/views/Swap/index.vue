@@ -35,9 +35,12 @@
           </div>
         </div>
 
-        <div class="flex-c mt-20">
+        <div class="flex-c mt-20" v-if="account">
           <el-button type="primary" @click="approval()" v-if="!allowance">Approval</el-button>
           <el-button type="primary" @click="swap()" v-else>Swap</el-button>
+        </div>
+        <div class="flex-c mt-20" v-else>
+          <el-button type="primary" disabled>Swap</el-button>
         </div>
       </div>
 
@@ -178,12 +181,16 @@ export default {
       this.chainId = mmWeb3.chainId
       if (supportChain.includes(this.chainId)) {
         this.account = accounts[0]
+      } else {
+        this.account = ''
       }
     })
     mmWeb3.on('networkChanged', network => {
       console.log(network)
-      if (!isNaN(network) || supportChain.includes(network)) {
+      if (supportChain.includes(network)) {
         this.chainId = network
+      } else {
+        this.account = ''
       }
     })
 
@@ -226,6 +233,10 @@ export default {
         destContract.balanceOf(account).then(res => {
           this.destBalance = res.toString()
         })
+      } else {
+        this.srcBalance = ''
+        this.allowance = ''
+        this.destBalance = ''
       }
     },
     getMetamaskAccount (type) {
