@@ -22,6 +22,23 @@ const routes = [
         component: resolve => require.ensure([], () => resolve(require('@/views/Home/index.vue')) , 'Multichain-index')
       }
     ]
+  },
+  {
+    path: '/swap',
+    component: Main,
+    meta: {
+      notCache: true
+    },
+    children: [
+      {
+        path: '/',
+        meta: {
+          label: 'home',
+          isViewNav: 1
+        },
+        component: resolve => require.ensure([], () => resolve(require('@/views/Swap/index.vue')) , 'Multichain-index')
+      }
+    ]
   }
 ]
 

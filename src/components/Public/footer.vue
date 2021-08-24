@@ -55,10 +55,8 @@
 <style lang="scss">
 .footer-box {
   width: 100%;
-  height: size(300);
-  margin-top: size(30);
   background:#000;
-  padding: size(30) 0;
+  padding: size(50) 0;
   .support-box {
     width: 100%;
     .h3 {

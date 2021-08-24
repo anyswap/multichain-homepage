@@ -1,4 +1,7 @@
 $doubleSize: 16;
+
+$headerH: 70;
+
 @function size ($n) {
   @if unit($n) == '%' {
     @return $n

@@ -1,12 +1,15 @@
 <template>
   <div class="header-box">
     <div class="header-content flex-bc container-md">
-      <div class="header-logo">
-        <img alt="logo" src="~@/assets/logo.svg" />
+      <div class="header-logo cursorP">
+        <img alt="logo" src="~@/assets/logo.svg" @click="toUrl('/')" />
       </div>
 
       <div class="header-right flex-ec">
         <ul class="nav-list flex-ec">
+          <li class="item">
+            <router-link to='/swap' class="link flex-c">Swap</router-link>
+          </li>
           <li class="item" v-for="(item, index) in navList" :key="index">
             <a :href="item.url" target="__blank" class="link flex-c">{{item.name}}</a>
           </li>
@@ -20,8 +23,13 @@
 <style lang="scss">
 .header-box {
   width: 100%;
-  height: size(70);
-  background: rgba(0,0,0,.1);
+  height: size($headerH);
+  background: rgba(255,255,255,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
   .header-content {
     height: 100%;
     margin: 0 auto;
@@ -36,6 +44,7 @@
         .item {
           height: 100%;
           padding: 0 size(20);
+          cursor: pointer;
           .link {
             color: #333;
             height: 100%;
