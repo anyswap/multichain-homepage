@@ -35,12 +35,13 @@
           </div>
         </div>
 
-        <div class="flex-c mt-20" v-if="account">
+        <div class="flex-c mt-20" v-if="account && !inputError && inputVal">
           <el-button type="primary" @click="approval()" v-if="!allowance">Approval</el-button>
           <el-button type="primary" @click="swap()" v-else>Swap</el-button>
         </div>
         <div class="flex-c mt-20" v-else>
-          <el-button type="primary" disabled>Swap</el-button>
+          <el-button type="danger" v-if="inputError">{{inputError}}</el-button>
+          <el-button type="primary" disabled v-else>Swap</el-button>
         </div>
       </div>
 
@@ -129,7 +130,7 @@
 import { ethers } from 'ethers'
 import {mmWeb3, getMMBaseInfo, getContract} from '@/libs/metamask.js'
 import erc20 from '@/config/ABI/erc20.json'
-import swap from '@/config/ABI/swapToken.json'
+import swapABI from '@/config/ABI/swapABI.json'
 
 const _userTokenBalance = ethers.constants.MaxUint256.toString()
 
@@ -142,7 +143,7 @@ const swapToken = '0xba484d2c9ca181de85228ff6bf75709fcf5664e7'
 
 const srcContract = getContract(erc20, srcToekn)
 const destContract = getContract(erc20, destToken)
-const swapContract = getContract(swap, swapToken)
+const swapContract = getContract(swapABI, swapToken)
 const dec = 18
 // const srcToekn = '0xf68c9df95a18b2a5a5fa1124d79eeeffbad0b6fa'
 // const destToken = '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d'
@@ -157,6 +158,7 @@ export default {
       destBalance: '',
       allowance: '',
       inputVal: '',
+      inputError: ''
       // outputVal: ''
     }
   },
@@ -172,6 +174,22 @@ export default {
   watch: {
     account () {
       this.getData()
+    },
+    inputVal () {
+      if (isNaN(this.inputVal)) {
+        this.inputError = 'Input Error!'
+      } else if (!isNaN(this.inputVal) && this.inputVal && this.srcBalance) {
+        const val = Number(this.inputVal)
+        const bl = Number(this.$$.fromWei(this.srcBalance, 18))
+        if (val > bl) {
+          this.inputError = 'Insufficient Balance!'
+        } else {
+          this.inputError = ''
+        }
+      } else {
+        this.inputError = ''
+      }
+      console.log(this.inputError)
     }
   },
   mounted () {
