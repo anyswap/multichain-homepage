@@ -1,20 +1,36 @@
 <template>
   <div class="index-box">
-    <Banner />
-    <div class="bridgeData-box">
-      <div class="bridgeData-list container-md">
-        <el-row :gutter="10" class="">
-          <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6" v-for="(item, index) in bridgeData" :key="index">
-            <div class="item">
-              <h3>
-                {{item.name}}
-              </h3>
-              <p>
-                {{item.count}}
-              </p>
+    <!-- <Banner /> -->
+    <div class="carousel-box">
+      <div class="container-md carousel-bg">
+        <el-carousel indicator-position="none" arrow="never" class="carousel-content">
+          <el-carousel-item v-for="(item, index) in bannerList" :key="index" class=" flex-c">
+            <div class="content">
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.content }}</p>
             </div>
-          </el-col>
-        </el-row>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div class="bridgeData-box">
+        <div class="carousel-btn flex-c">
+          <el-button type="primary" @click="methods('https://stable.anyswap.exchange/')">Enter App</el-button>
+          <el-button @click="openUrl('https://anyswap.net/')">Explorer</el-button>
+        </div>
+        <div class="bridgeData-list container-md">
+          <el-row :gutter="10" class="">
+            <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6" v-for="(item, index) in bridgeData" :key="index">
+              <div class="item">
+                <h3>
+                  {{item.name}}
+                </h3>
+                <p>
+                  {{item.count}}
+                </p>
+              </div>
+            </el-col>
+          </el-row>
+        </div>
       </div>
     </div>
 
@@ -61,120 +77,19 @@
 </template>
 
 <style lang="scss">
-.index-box {
-  width: 100%;
-  height: 100%;
-  .bridgeData-box {
-    padding: size(30) 0;
-    background: rgb(21, 26, 47);
-    .bridgeData-title {
-      width: 100%;
-      text-align: center;
-      font-size: size(30);
-      font-weight: bold;
-      margin-bottom: size(30);
-      color: #fff;
-    }
-    .bridgeData-list {
-      color: #fff;
-      .item {
-        padding: size(20) size(15);
-        h3 {
-          font-size: size(14);
-          line-height: size(45);
-          text-align: center;
-        }
-        p {
-          font-size: size(30);
-          line-height: size(21);
-          text-align: center;
-        }
-      }
-    }
-  }
-  .chainData-box {
-    padding: size(30) 0;
-    .chainData-title {
-      width: 100%;
-      text-align: left;
-      font-size: size(30);
-      font-weight: bold;
-      margin-bottom: size(30);
-    }
-    .chainData-list {
-      color: #fff;
-      flex-wrap: wrap;
-      .item {
-        width: size(80);
-        height: size(80);
-        padding: size(20);
-        img {
-          width: 100%;
-          display: block;
-        }
-      }
-    }
-  }
-  .tokenData-box {
-    padding: size(30) 0;
-    .tokenData-title {
-      width: 100%;
-      text-align: left;
-      font-size: size(30);
-      font-weight: bold;
-      margin-bottom: size(30);
-    }
-    .tokenData-list {
-      color: #fff;
-      flex-wrap: wrap;
-      .item {
-        width: size(80);
-        height: size(80);
-        padding: size(20);
-        img {
-          width: 100%;
-          display: block;
-        }
-      }
-    }
-  }
-  .leagueData-box {
-    padding: size(30) 0;
-    .leagueData-title {
-      width: 100%;
-      text-align: left;
-      font-size: size(30);
-      font-weight: bold;
-      margin-bottom: size(30);
-    }
-    .leagueData-list {
-      color: #fff;
-      .item {
-        padding: size(20) size(15);
-        text-align: center;
-        display: block;
-        h3 {
-          font-size: size(30);
-          line-height: size(45);
-          color: #333;
-        }
-        img {
-          width: size(50);
-          display: inline-block;
-        }
-      }
-    }
-  }
-}
+@import './scss.scss';
 </style>
 
 <script>
-import Banner from '@v/Home/banner.vue'
+// import Banner from '@v/Home/banner.vue'
 export default {
   name: 'Home',
-  components: {Banner},
+  // components: {Banner},
   data () {
     return {
+      bannerList: [
+        {title: 'Decentralized cross-chain bridge protocol', content: 'An infrastructure designed for arbitrary assets cross-chain based on MPC  '}
+      ],
       supportLeague: [
         {logoUrl: require('../../assets/img/MUL.png'), name: 'Multichain.xyz', url: 'https://multichain.xyz/'},
         {logoUrl: require('../../assets/img/NRV.svg'), name: 'Nerve.fi', url: 'https://app.nerve.fi/bridge'},
@@ -253,6 +168,9 @@ export default {
     this.initToken()
   },
   methods: {
+    openUrl (url) {
+      window.open(url)
+    },
     initToken () {
       if (this.tokenInfo && this.tokenInfo.length > 0) {
         // this.tokenInfo.sort(this.$$.bigToSmallSort('tvl'))

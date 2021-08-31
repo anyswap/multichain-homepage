@@ -24,7 +24,8 @@
 .header-box {
   width: 100%;
   height: size($headerH);
-  background: rgba(255,255,255,.5);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.06);
   position: fixed;
   top: 0;
   left: 0;
@@ -46,7 +47,7 @@
           padding: 0 size(20);
           cursor: pointer;
           .link {
-            color: #333;
+            color: #fff;
             height: 100%;
             line-height: 100%;
             &:hover {
