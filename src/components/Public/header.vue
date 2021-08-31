@@ -14,7 +14,7 @@
             <a :href="item.url" target="__blank" class="link flex-c">{{item.name}}</a>
           </li>
         </ul>
-        <el-button @click="openUrl(appUrl)">Enter App</el-button>
+        <el-button @click="openUrl(appUrl)" type="primary" class="btn-radius">Enter App</el-button>
       </div>
     </div>
   </div>

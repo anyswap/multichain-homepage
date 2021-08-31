@@ -86,74 +86,147 @@ $cardH: 400;
     }
   }
   .chainData-box {
-    padding: size(30) 0;
+    padding: 5% 0;
+    width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    // background: rgb(21, 26, 47);
+    background: url('~@/assets/img/bg/support-chains.svg') no-repeat center #18171C;
+    background-size: cover;
     .chainData-title {
       width: 100%;
-      text-align: left;
-      font-size: size(30);
+      text-align: center;
       font-weight: bold;
-      margin-bottom: size(30);
+      font-size: size(88);
+      line-height: size(132);
+      color: #fff;
+      margin-bottom: 5%;
     }
     .chainData-list {
       color: #fff;
       flex-wrap: wrap;
       .item {
-        width: size(80);
+        width: 100%;
         height: size(80);
-        padding: size(20);
-        img {
+        margin-bottom: size(80);
+        .content {
           width: 100%;
-          display: block;
+          .pic {
+            width: size(50);
+            height: size(50);
+            // padding: size(20);
+            border-radius: 100%;
+            overflow: hidden;
+            margin: auto;
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+          .p {
+            text-align: center;
+            font-size: size(18);
+            color: #fff;
+            margin-top: size(10);
+          }
         }
       }
     }
   }
   .tokenData-box {
-    padding: size(30) 0;
+    padding: 5% 0;
+    width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    // background: rgb(21, 26, 47);
+    background: url('~@/assets/img/bg/support-tokens.svg') no-repeat center #18171C;
+    background-size: cover;
     .tokenData-title {
       width: 100%;
-      text-align: left;
-      font-size: size(30);
+      text-align: center;
       font-weight: bold;
-      margin-bottom: size(30);
+      font-size: size(88);
+      line-height: size(132);
+      color: #fff;
+      margin-bottom: 5%;
     }
     .tokenData-list {
       color: #fff;
       flex-wrap: wrap;
       .item {
-        width: size(80);
+        width: 100%;
         height: size(80);
-        padding: size(20);
-        img {
+        margin-bottom: size(80);
+        .content {
           width: 100%;
-          display: block;
+          .pic {
+            width: size(50);
+            height: size(50);
+            // padding: size(20);
+            border-radius: 100%;
+            overflow: hidden;
+            margin: auto;
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+          .p {
+            text-align: center;
+            font-size: size(18);
+            color: #fff;
+            margin-top: size(10);
+          }
         }
       }
     }
   }
   .leagueData-box {
-    padding: size(30) 0;
+    padding: 10% 0;
+    width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    // background: rgb(21, 26, 47);
+    background: url('~@/assets/img/bg/cross-chain-allinces.svg') no-repeat center #18171C;
+    background-size: cover;
     .leagueData-title {
       width: 100%;
-      text-align: left;
-      font-size: size(30);
+      text-align: center;
       font-weight: bold;
-      margin-bottom: size(30);
+      font-size: size(88);
+      line-height: size(132);
+      color: #fff;
+      margin-bottom: 5%;
     }
     .leagueData-list {
       color: #fff;
       .item {
-        padding: size(20) size(15);
-        text-align: center;
-        display: block;
-        h3 {
-          font-size: size(30);
-          line-height: size(45);
-          color: #333;
-        }
-        img {
-          width: size(50);
-          display: inline-block;
+        width: 25%;
+        height: size(80);
+        margin-bottom: size(80);
+        .content {
+          width: 100%;
+          .pic {
+            width: size(50);
+            height: size(50);
+            // padding: size(20);
+            border-radius: 100%;
+            overflow: hidden;
+            margin: auto;
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+          .p {
+            text-align: center;
+            font-size: size(18);
+            color: #fff;
+            margin-top: size(10);
+          }
         }
       }
     }

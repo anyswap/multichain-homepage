@@ -8,15 +8,16 @@
             <div class="content">
               <h3>{{ item.title }}</h3>
               <p>{{ item.content }}</p>
+              <div class="carousel-btn flex-c">
+                <el-button type="primary" @click="methods('https://stable.anyswap.exchange/')" class="btn-radius IH50 font20 plr30">Enter App</el-button>
+                <el-button @click="openUrl('https://anyswap.net/')" class="btn-radius IH50 font20 ml-20 plr30">Explorer</el-button>
+              </div>
             </div>
           </el-carousel-item>
         </el-carousel>
       </div>
       <div class="bridgeData-box">
-        <div class="carousel-btn flex-c">
-          <el-button type="primary" @click="methods('https://stable.anyswap.exchange/')">Enter App</el-button>
-          <el-button @click="openUrl('https://anyswap.net/')">Explorer</el-button>
-        </div>
+        
         <div class="bridgeData-list container-md">
           <el-row :gutter="10" class="">
             <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6" v-for="(item, index) in bridgeData" :key="index">
@@ -39,9 +40,19 @@
         <h3>Supported Chains</h3>
       </div>
       <ul class="chainData-list container-md flex-sc">
-        <li v-for="(item, index) in chainInfo" :key="index" class="item">
-          <img :src="item.logoUrl" alt="item.name">
-        </li>
+        <el-row :gutter="10" class="">
+          <el-col :xs="6" :sm="6" :md="3" :lg="3" :xl="3" v-for="(item, index) in chainInfo" :key="index">
+            <li class="item flex-c">
+            <!-- <li v-for="(item, index) in chainInfo" :key="index" class="item flex-c"> -->
+              <div class="content">
+                <div class="pic">
+                  <img :src="item.logoUrl" :alt="item.name">
+                </div>
+                <p class="p">{{item.name}}</p>
+              </div>
+            </li>
+          </el-col>
+        </el-row>
       </ul>
     </div>
 
@@ -49,11 +60,21 @@
       <div class="tokenData-title container-md">
         <h3>Supported tokens</h3>
       </div>
-      <div class="tokenData-list container-md flex-sc">
-        <li v-for="(item, index) in supportToken" :key="index" class="item">
-          <img :src="item.logoUrl" alt="item.name">
-        </li>
-      </div>
+      <ul class="tokenData-list container-md flex-sc">
+        <el-row :gutter="10" class="">
+          <el-col :xs="6" :sm="6" :md="3" :lg="3" :xl="3" v-for="(item, index) in supportToken" :key="index">
+            <li class="item flex-c">
+            <!-- <li v-for="(item, index) in supportToken" :key="index" class="item flex-c"> -->
+              <div class="content">
+                <div class="pic">
+                  <img :src="item.logoUrl" :alt="item.name">
+                </div>
+                <p class="p">{{item.name}}</p>
+              </div>
+            </li>
+          </el-col>
+        </el-row>
+      </ul>
     </div>
 
     <div class="leagueData-box">
@@ -64,10 +85,14 @@
         <el-row :gutter="10" class="">
           <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6" v-for="(item, index) in supportLeague" :key="index">
             <a class="item" :href="item.url" target="__blank">
-              <img :src="item.logoUrl" :alt="item.name" >
-              <h3>
-                {{item.name}}
-              </h3>
+              <div class="content">
+                <div class="pic">
+                  <img :src="item.logoUrl" :alt="item.name">
+                </div>
+                <h3 class="p">
+                  {{item.name}}
+                </h3>
+              </div>
             </a>
           </el-col>
         </el-row>

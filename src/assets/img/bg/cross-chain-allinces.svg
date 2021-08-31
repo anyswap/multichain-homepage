@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="801px" viewBox="0 0 1920 801" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 33 + 编组 34 蒙版</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1920" height="801"></rect>
+        <linearGradient x1="61.6372053%" y1="0%" x2="40.5589564%" y2="108.813662%" id="linearGradient-3">
+            <stop stop-color="#757575" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#2584F7" offset="0%"></stop>
+            <stop stop-color="#2584F7" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#F7931A" offset="0%"></stop>
+            <stop stop-color="#F71A1A" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Apple-TV备份-43" transform="translate(0.000000, -3293.000000)">
+            <g id="编组-33-+-编组-34-蒙版" transform="translate(0.000000, 3293.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="蒙版" fill="#D8D8D8" opacity="0" xlink:href="#path-1"></use>
+                <g id="编组-33" mask="url(#mask-2)">
+                    <g transform="translate(1771.251634, 256.250000) rotate(-60.000000) translate(-1771.251634, -256.250000) translate(1668.251634, -8.750000)">
+                        <g id="编组-32" stroke-width="1" fill="none" stroke-linecap="round">
+                            <polyline id="路径" stroke="url(#linearGradient-3)" stroke-width="2" points="206 103 206 530 0 530 0 103"></polyline>
+                            <circle id="椭圆形" stroke="#979797" stroke-width="2" transform="translate(103.000000, 103.000000) rotate(-360.000000) translate(-103.000000, -103.000000) " cx="103" cy="103" r="103"></circle>
+                        </g>
+                        <path d="M123.87325,50 L144,69.960855 L123.87325,89.92171 L123.873,77.287 L86.2113729,77.2879482 C80.811504,77.2879482 76.4340454,81.6293255 76.4340454,86.9846859 C76.4340454,92.2853997 80.7226239,96.5927185 86.0463937,96.6800711 L86.2113729,96.6814236 L119.893208,96.6814236 C133.095303,96.6814236 143.797716,107.295622 143.797716,120.388898 C143.797716,133.351242 133.308281,143.883841 120.288513,144.093197 L119.893208,144.096373 L82.126,144.096 L82.12675,157 L62,137.039145 L82.12675,117.07829 L82.126,129.981 L119.893208,129.981917 C125.235319,129.981917 129.565955,125.686976 129.565955,120.388898 C129.565955,115.14544 125.32415,110.884542 120.058102,110.797245 L119.893208,110.79588 L86.2113729,110.79588 C72.9515193,110.79588 62.202284,100.135245 62.202284,86.9846859 C62.202284,73.9656323 72.7376095,63.3869539 85.8143387,63.1766822 L86.2113729,63.1734922 L123.873,63.173 L123.87325,50 Z" id="形状结合" fill="#B8B8B8" transform="translate(103.000000, 103.500000) scale(-1, 1) rotate(-90.000000) translate(-103.000000, -103.500000) "></path>
+                    </g>
+                </g>
+                <g id="编组-34" mask="url(#mask-2)" stroke-width="16">
+                    <g transform="translate(951.161577, 395.976150) rotate(-90.000000) translate(-951.161577, -395.976150) translate(576.161577, -573.273850)">
+                        <polyline id="路径-24" stroke="url(#linearGradient-4)" transform="translate(631.500000, 177.750000) scale(-1, 1) translate(-631.500000, -177.750000) " points="631.5 0 750 118.5 513 355.5"></polyline>
+                        <polyline id="路径-24备份" stroke="url(#linearGradient-5)" stroke-linecap="round" transform="translate(118.500000, 1760.750000) scale(-1, 1) rotate(-180.000000) translate(-118.500000, -1760.750000) " points="118.5 1583 237 1701.5 0 1938.5"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
