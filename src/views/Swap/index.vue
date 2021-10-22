@@ -1,52 +1,56 @@
 <template>
-  <div class="swap-content-bg">
-    <div class="container-md">
-      <div class="swap-top flex-ec">
-        <div v-if="chainId && account && supportChain.includes(chainId)" class="pub-style account-view" :title="account">
-          {{account.slice(0, 6) + '...' + account.slice(account.length - 5, account.length)}}
+  <div>
+    <div class="swap-content-bg">
+      <HeaderWrapper />
+      <div class="container-md">
+        <div class="swap-top flex-ec">
+          <div v-if="chainId && account && supportChain.includes(chainId)" class="pub-style account-view" :title="account">
+            {{account.slice(0, 6) + '...' + account.slice(account.length - 5, account.length)}}
+          </div>
+          <div v-else-if="chainId && !supportChain.includes(chainId)" class="pub-style network-error" @click="msgWarning('Please connect to Ethereum Mainnet!')">
+            Network Error
+          </div>
+          <div v-else class="pub-style swap-connect" @click="getMetamaskAccount()">
+            Connect Wallet
+          </div>
         </div>
-        <div v-else-if="chainId && !supportChain.includes(chainId)" class="pub-style network-error" @click="msgWarning('Please connect to Ethereum Mainnet!')">
-          Network Error
+        <div class="swap-content">
+          <h3 class="h3 mb-20">Swap ANY</h3>
+
+          <div class="swap-input">
+            <div class="swap-input-label flex-bc">
+              <h5>Balance:{{$$.fromWei(srcBalance, 18)}}</h5>
+            </div>
+            <div class="swap-input-num">
+              <el-input v-model="inputVal" />
+            </div>
+          </div>
+          <div class="swap-line flex-c">
+            <i class="el-icon-bottom"></i>
+          </div>
+          <div class="swap-input">
+            <div class="swap-input-label flex-bc">
+              <h5>Balance:{{$$.fromWei(destBalance, 18)}}</h5>
+            </div>
+            <div class="swap-input-num">
+              <el-input v-model="outputVal" disabled />
+            </div>
+          </div>
+
+          <div class="flex-c mt-20" v-if="account && !inputError && inputVal">
+            <el-button type="primary" @click="approval()" v-if="!allowance">Approval</el-button>
+            <el-button type="primary" @click="swap()" v-else>Swap</el-button>
+          </div>
+          <div class="flex-c mt-20" v-else>
+            <el-button type="danger" v-if="inputError">{{inputError}}</el-button>
+            <el-button type="primary" disabled v-else>Swap</el-button>
+          </div>
         </div>
-        <div v-else class="pub-style swap-connect" @click="getMetamaskAccount()">
-          Connect Wallet
-        </div>
+
       </div>
-      <div class="swap-content">
-        <h3 class="h3 mb-20">Swap ANY</h3>
-
-        <div class="swap-input">
-          <div class="swap-input-label flex-bc">
-            <h5>Balance:{{$$.fromWei(srcBalance, 18)}}</h5>
-          </div>
-          <div class="swap-input-num">
-            <el-input v-model="inputVal" />
-          </div>
-        </div>
-        <div class="swap-line flex-c">
-          <i class="el-icon-bottom"></i>
-        </div>
-        <div class="swap-input">
-          <div class="swap-input-label flex-bc">
-            <h5>Balance:{{$$.fromWei(destBalance, 18)}}</h5>
-          </div>
-          <div class="swap-input-num">
-            <el-input v-model="outputVal" disabled />
-          </div>
-        </div>
-
-        <div class="flex-c mt-20" v-if="account && !inputError && inputVal">
-          <el-button type="primary" @click="approval()" v-if="!allowance">Approval</el-button>
-          <el-button type="primary" @click="swap()" v-else>Swap</el-button>
-        </div>
-        <div class="flex-c mt-20" v-else>
-          <el-button type="danger" v-if="inputError">{{inputError}}</el-button>
-          <el-button type="primary" disabled v-else>Swap</el-button>
-        </div>
-      </div>
-
-    </div>
-  </div>  
+    </div>  
+    <FooterWrapper />
+  </div>
 </template>
 
 <style lang="scss">
@@ -57,8 +61,8 @@
   min-height: 100%;
   min-width: 100vw;
   min-height:100vh;
-  background: linear-gradient(to right, #734ce2 , #606bfb);
-  padding: size($headerH) 0 0 0;
+  @include bg('bannerBgColor');
+  // padding: size($headerH) 0 0 0;
   .swap-top {
     width: 100%;
     padding: size(10) 0;
@@ -132,6 +136,9 @@ import {mmWeb3, getMMBaseInfo, getContract} from '@/libs/metamask.js'
 import erc20 from '@/config/ABI/erc20.json'
 import swapABI from '@/config/ABI/swapABI.json'
 
+import HeaderWrapper from '@c/Public/header.vue'
+import FooterWrapper from '@c/Public/footer.vue'
+
 const _userTokenBalance = ethers.constants.MaxUint256.toString()
 
 const supportChain = ['4', 4, '0x4']
@@ -162,6 +169,7 @@ export default {
       // outputVal: ''
     }
   },
+  components: {HeaderWrapper, FooterWrapper},
   computed: {
     outputVal () {
       if (isNaN(this.inputVal)) {

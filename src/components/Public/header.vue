@@ -61,7 +61,7 @@
             line-height: 100%;
             font-family: 'Manrope-ExtraBold';
             &:hover {
-              color: blue;
+              opacity: .8;
             }
           }
         }

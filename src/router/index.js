@@ -25,20 +25,20 @@ const routes = [
   },
   {
     path: '/swap',
-    component: Main,
-    meta: {
-      notCache: true
-    },
-    children: [
-      {
-        path: '/',
-        meta: {
-          label: 'home',
-          isViewNav: 1
-        },
-        component: resolve => require.ensure([], () => resolve(require('@/views/Swap/index.vue')) , 'Multichain-index')
-      }
-    ]
+    component: resolve => require.ensure([], () => resolve(require('@/views/Swap/index.vue')) , 'Multichain-index')
+  //   meta: {
+  //     notCache: true
+  //   },
+  //   children: [
+  //     {
+  //       path: '/',
+  //       meta: {
+  //         label: 'home',
+  //         isViewNav: 1
+  //       },
+  //       component: resolve => require.ensure([], () => resolve(require('@/views/Swap/index.vue')) , 'Multichain-index')
+  //     }
+  //   ]
   }
 ]
 
