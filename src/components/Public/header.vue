@@ -2,7 +2,7 @@
   <div class="header-box">
     <div class="header-content flex-bc container-md">
       <div class="header-logo cursorP">
-        <img alt="logo" src="~@/assets/logo.svg" @click="toUrl('/')" />
+        <img alt="logo" src="~@/assets/logo-white.png" @click="toUrl('/')" />
       </div>
 
       <div class="header-right flex-ec">
@@ -14,7 +14,11 @@
             <a :href="item.url" target="__blank" class="link flex-c">{{item.name}}</a>
           </li>
         </ul>
-        <el-button @click="openUrl(appUrl)" type="primary" class="btn-radius">Enter App</el-button>
+        <div class="is-dark" @click="changeTheme">
+          <img src="~@/assets/img/day.png" v-if="isDark"/>
+          <img src="~@/assets/img/night.png" v-else/>
+        </div>
+        <el-button @click="openUrl(appUrl)" type="primary" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Enter App</el-button>
       </div>
     </div>
   </div>
@@ -24,19 +28,24 @@
 .header-box {
   width: 100%;
   height: size($headerH);
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.06);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
+  // @include bg('bannerBgColor');
+  // background: rgba(0, 0, 0, 0.6);
+  // box-shadow: 0px 15px 10px 0px rgba(0, 0, 0, 0.06);
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: 99;
   .header-content {
     height: 100%;
     margin: 0 auto;
     .header-logo {
       height: 100%;
       padding: size(10) 0;
+      img {
+        height: 100%;
+        display: block;
+      }
     }
     .header-right {
       height: 100%;
@@ -59,6 +68,12 @@
     }
   }
 }
+.is-dark {
+  width: size(36);height: size(36);padding:size(8); @include bg("bg1");border-radius:100%;
+  img {
+    height: 100%; display: block;
+  }
+}
 </style>
 
 <script>
@@ -73,10 +88,19 @@ export default {
       appUrl: 'https://deploy.anyswap.exchange/#/swap'
     }
   },
+  computed: {
+    isDark () {
+      return Number(this.$store.state.isDark)
+    },
+  },
   methods: {
     openUrl (url) {
       window.open(url)
-    }
+    },
+    changeTheme () {
+      let flag = this.isDark ? 0 : 1
+      this.$store.commit('setIsDark', flag)
+    },
   }
 }
 </script>

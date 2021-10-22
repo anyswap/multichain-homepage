@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Manrope-Bold";
+  src: url("Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope-ExtraBold";
+  src: url("ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("Regular.ttf") format("truetype");
+}

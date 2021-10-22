@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view v-if="isRefresh"/>
   </div>
 </template>
 
@@ -22,8 +22,22 @@ export default {
   name: 'App',
   data () {
     return {
-
+      isRefresh: true
     }
+  },
+  computed: {
+    isDark () {
+      return this.$store.state.isDark
+    },
+  },
+  watch: {
+    isDark () {
+      this.refersh()
+      this.toggleTheme(this.isDark)
+    },
+  },
+  created () {
+    this.toggleTheme(this.isDark)
   },
   mounted () {
     this.getBridgeData()
@@ -32,6 +46,18 @@ export default {
     ...mapActions([
       'getBridgeData',
     ]),
+    toggleTheme(flag) {
+      window.document.documentElement.setAttribute(
+        "data-theme",
+        Number(flag) ? "dark" : "light"
+      );
+    },
+    refersh () {
+      this.isRefresh = false
+      this.$nextTick(() => {
+        this.isRefresh = true
+      })
+    }
   }
 }
 </script>

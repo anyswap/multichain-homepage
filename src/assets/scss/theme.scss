@@ -2,11 +2,86 @@ $doubleSize: 16;
 
 $headerH: 70;
 
+@mixin shadow {
+  box-shadow: 0px 0px 12px #00000059;
+}
+
 @function size ($n) {
   @if unit($n) == '%' {
     @return $n
   };
   @if unit($n) == '' {
     @return ($n / $doubleSize) + rem
+  }
+}
+
+$themes: (
+  light: (
+    bannerBgColor: transparent radial-gradient(closest-side at 50% 50%, #6CA5FF 0%, #524DFB 100%) 0% 0% no-repeat padding-box,
+    bannerBgImg: url('~@/assets/img/bg/banner_white_bg.png') no-repeat right bottom,
+    bannerColBg: #4846EE 0% 0% no-repeat padding-box,
+
+    contentBgColor1: #F6F6F6,
+    contentBgColor2: #FFFFFF,
+
+    cardBgColor: #FFFFFF,
+    titleColor: #1D1D1B,
+
+    alliancesBgColor: transparent linear-gradient(180deg, #25ED9F 0%, #23E8A4 23%, #1DDCB3 52%, #14C8CB 83%, #0EBBDC 100%) 0% 0% no-repeat padding-box,
+  ),
+  dark: (
+    bannerBgColor: transparent radial-gradient(closest-side at 50% 50%, #21263E 0%, #1C2133 100%) 0% 0% no-repeat padding-box,
+    // bannerBgImg: url('~@/assets/img/bg/banner_black_bg.png') no-repeat right,
+    bannerBgImg: url('~@/assets/img/bg/banner_white_bg.png') no-repeat right bottom,
+    bannerColBg: #394358 0% 0% no-repeat padding-box,
+
+    contentBgColor1: #21263E,
+    contentBgColor2: #394358,
+
+    cardBgColor: #151A2F,
+    titleColor: #FFFFFF,
+
+    alliancesBgColor: #151A2F 0% 0% no-repeat padding-box,
+  )
+);
+
+
+//遍历主题map
+@mixin themeify {
+  @each $theme-name, $theme-map in $themes {
+    //!global 把局部变量强升为全局变量
+    $theme-map: $theme-map !global;
+    //这步是判断html的data-theme的属性值  #{}是sass的插值表达式
+    //& sass嵌套里的父容器标识   @content是混合器插槽，像vue的slot
+    [data-theme="#{$theme-name}"] & {
+      @content;
+    }
+  }
+}
+//声明一个根据Key获取颜色的function
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+//获取背景颜色
+@mixin bg($color) {
+  @include themeify {
+    background: themed($color);
+  }
+}
+@mixin bgc($color) {
+  @include themeify {
+    background-color: themed($color);
+  }
+}
+//获取字体颜色
+@mixin fc($color) {
+  @include themeify {
+    color: themed($color)!important;
+  }
+}
+//获取边框颜色
+@mixin bdc($color) {
+  @include themeify {
+    border-color: themed($color)!important;
   }
 }

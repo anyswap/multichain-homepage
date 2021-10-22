@@ -8,20 +8,20 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    component: Main,
-    meta: {
-      notCache: true
-    },
-    children: [
-      {
-        path: '/',
-        meta: {
-          label: 'home',
-          isViewNav: 1
-        },
-        component: resolve => require.ensure([], () => resolve(require('@/views/Home/index.vue')) , 'Multichain-index')
-      }
-    ]
+    component: resolve => require.ensure([], () => resolve(require('@/views/Home/index.vue')) , 'Multichain-index')
+    // meta: {
+    //   notCache: true
+    // },
+    // children: [
+    //   {
+    //     path: '/',
+    //     meta: {
+    //       label: 'home',
+    //       isViewNav: 1
+    //     },
+    //     component: resolve => require.ensure([], () => resolve(require('@/views/Home/index.vue')) , 'Multichain-index')
+    //   }
+    // ]
   },
   {
     path: '/swap',

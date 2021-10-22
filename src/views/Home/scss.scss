@@ -1,53 +1,92 @@
 $cardH: 400;
+$moreHeight: 100;
 .carousel-box {
   width: 100%;
   height: 100%;
   width: 100vw;
   height: 100vh;
-  // background: rgb(21, 26, 47);
-  background: url('~@/assets/img/bg/banner.png') no-repeat center;
-  background-size: cover;
+  @include bg('bannerBgColor');
   position: relative;
+  .carousel-header-box {
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+  .carousel-box-content {
+    width:100%;
+    height:100%;
+    @include bg('bannerBgImg');
+    background-size: auto!important;
+  }
   .carousel-bg {
-    height: 85%;
+    height: 100%;
+    z-index: 8;
     .carousel-content {
-      // height: size($cardH);
       height: 100%;
       .el-carousel__container {
         height: 100%;
         .el-carousel__item{
-          // padding: size(150) 0;
           height: 100%;
+          width: 100%;
           color: #fff;
           .content {
-            h3 {
-              font-size: size(48);
-              line-height: size(72);
-              text-align: center;
-              margin-bottom: size(30);
+            height: 100%;
+            width: 100%;
+            position: relative;
+            padding-top: size($headerH);
+            $colW: 200;
+            .carousel-col {
+              width: size($colW);
+              height: 80%;
+              border-radius: 10px 10px 0px 0px;
+              opacity: 0.1;
+              @include bg('bannerColBg');
+              position: absolute;
+              left: 0;
+              bottom: 0;
             }
-            p {
-              font-size: size(36);
-              line-height: size(54);
-              text-align: center;
-            }
-            @media screen and (max-width: 960px) {
+            .carousel-info {
+              position: absolute;
+              left: size($colW / 2);
+              top: 20%;
+              padding-top: size(30);
+              text-align: left;
               h3 {
-                font-size: size(24);
-                line-height: size(36);
+                font-size: size(86);
+                line-height: size($moreHeight);
+                font-family: 'Manrope-Bold';
               }
-              p {
-                font-size: size(16);
-                line-height: size(24);
+              .p1 {
+                font-size: size(28);
+                line-height: size(54);
+                margin-bottom: size(10);
+                font-family: 'Manrope-ExtraBold';
+              }
+              .p2 {
+                font-size: size(22);
+                line-height: size(30);
+                font-family: 'Manrope-Regular';
+              }
+              .carousel-btn {
+                width: 100%;
+                padding: size(30) 0;
+              }
+              @media screen and (max-width: 960px) {
+                h3 {
+                  font-size: size(24);
+                  line-height: size(36);
+                }
+                .p1,.p2 {
+                  font-size: size(16);
+                  line-height: size(24);
+                }
               }
             }
           }
         }
       }
-    }
-    .carousel-btn {
-      width: 100%;
-      padding: size(30) 0;
     }
   }
 }
@@ -55,53 +94,125 @@ $cardH: 400;
   width: 100%;
   height: 100%;
   .bridgeData-box {
-    padding: size(30) 0;
+    // padding: size(30) 0;
+    height: size($moreHeight);
     position: absolute;
     left:0;
     right: 0;
-    bottom: 0;
-    .bridgeData-title {
-      width: 100%;
-      text-align: center;
-      font-size: size(30);
-      font-weight: bold;
-      margin-bottom: size(30);
-      color: #fff;
-    }
+    bottom: size(-50);
+    z-index: 9;
     .bridgeData-list {
+      height: 100%;
       color: #fff;
+      @include bg('cardBgColor');
+      @include shadow;
+      border-radius: 10px;
       .item {
-        padding: size(20) size(15);
+        height: size($moreHeight);
+        padding: size(15) size(15) size(20);
+        font-family: 'Manrope-ExtraBold';
         h3 {
-          font-size: size(14);
-          line-height: size(45);
+          font-size: size(16);
+          line-height: size(32);
           text-align: center;
+          @include fc('titleColor');
+          margin-bottom: size(8);
         }
         p {
-          font-size: size(30);
+          font-size: size(28);
           line-height: size(21);
           text-align: center;
+          color: #9649F5;
         }
       }
     }
   }
-  .chainData-box {
-    padding: 5% 0;
+  .mul-introduce-box {
+    padding: size(120) 0 size(100);
     width: 100%;
     min-height: 100%;
     width: 100vw;
     min-height: 100vh;
-    // background: rgb(21, 26, 47);
-    background: url('~@/assets/img/bg/support-chains.svg') no-repeat center #18171C;
-    background-size: cover;
+    @include bg('contentBgColor1');
+    position: relative;
+    .mul-introduce-title {
+      width: 100%;
+      text-align: center;
+      font-size: size(46);
+      line-height: size(92);
+      @include fc('titleColor');
+      margin-bottom: 3%;
+      font-family: 'Manrope-ExtraBold';
+    }
+    .mul-introduce-list {
+      color: #fff;
+      flex-wrap: wrap;
+      .el-col {
+        padding-top: size(80);
+        &:nth-child(2) {
+          padding-top: 0;
+        }
+        @media screen and (max-width: 960px) {
+          padding-top: size(0);
+          margin-bottom: size(20);
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        .item {
+          width: 100%;
+          .content {
+            width: 100%;
+            // height: size(360);
+            @include bg('cardBgColor');
+            @include shadow;
+            border-radius: 10px;
+            padding: size(50);
+            .pic {
+              width: size(72);
+              height: size(72);
+              margin: auto;
+              img {
+                max-width: 100%;
+                max-height: 100%;
+                display: block;
+              }
+            }
+            .h3 {
+              font-family: 'Manrope-ExtraBold';
+              font-size: size(22);
+              @include fc('titleColor');
+              text-align: center;
+              margin: size(30) auto;
+            }
+            .p {
+              text-align: center;
+              font-size: size(16);
+              @include fc('titleColor');
+              line-height: size(32);
+              font-family: 'Manrope-Regular';
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  .chainData-box {
+    padding: size(120) 0 size(100);
+    width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    @include bg('contentBgColor2');
     .chainData-title {
       width: 100%;
       text-align: center;
-      font-weight: bold;
-      font-size: size(88);
-      line-height: size(132);
-      color: #fff;
+      font-size: size(46);
+      line-height: size(92);
+      @include fc('titleColor');
       margin-bottom: 5%;
+      font-family: 'Manrope-ExtraBold';
     }
     .chainData-list {
       color: #fff;
@@ -127,30 +238,30 @@ $cardH: 400;
           .p {
             text-align: center;
             font-size: size(18);
-            color: #fff;
+            @include fc('titleColor');
             margin-top: size(10);
+            font-family: 'Manrope-ExtraBold';
           }
         }
       }
     }
   }
   .tokenData-box {
-    padding: 5% 0;
+    padding: size(120) 0 size(100);
     width: 100%;
     min-height: 100%;
     width: 100vw;
     min-height: 100vh;
-    // background: rgb(21, 26, 47);
-    background: url('~@/assets/img/bg/support-tokens.svg') no-repeat center #18171C;
-    background-size: cover;
+    @include bg('contentBgColor2');
+    position: relative;
     .tokenData-title {
       width: 100%;
       text-align: center;
-      font-weight: bold;
-      font-size: size(88);
-      line-height: size(132);
-      color: #fff;
+      font-size: size(46);
+      line-height: size(92);
+      @include fc('titleColor');
       margin-bottom: 5%;
+      font-family: 'Manrope-ExtraBold';
     }
     .tokenData-list {
       color: #fff;
@@ -176,58 +287,138 @@ $cardH: 400;
           .p {
             text-align: center;
             font-size: size(18);
-            color: #fff;
+            @include fc('titleColor');
             margin-top: size(10);
+            font-family: 'Manrope-ExtraBold';
           }
         }
       }
     }
   }
   .leagueData-box {
-    padding: 10% 0;
+    @include bg('contentBgColor1');
     width: 100%;
     min-height: 100%;
     width: 100vw;
     min-height: 100vh;
-    // background: rgb(21, 26, 47);
-    background: url('~@/assets/img/bg/cross-chain-allinces.svg') no-repeat center #18171C;
-    background-size: cover;
+    padding: size(50) 0;
+    .leagueData-content {
+      width: 100%;
+    }
+    .intro {
+      width: 100%;
+      height: 286px;
+      @include bg('alliancesBgColor');
+      box-shadow: 0px 0px 12px #00000040;
+      border-radius: 10px;
+      font-size: size(46);
+      color: #fff;
+      line-height: size(66);
+      padding: size(50);
+      font-family: 'Manrope-ExtraBold';
+    }
+    .steps-box {
+      height: size(182);
+      margin-top: size(50);
+      position: relative;
+      padding-left: size(50);
+      .step {
+        width: 100%;
+        @extend .flex-sc;
+        position: relative;
+        @include fc('titleColor');
+        font-family: 'Manrope-ExtraBold';
+        margin-bottom: size(45);
+        $iconH: 32;
+        .icon {
+          color: #25ED9F;
+          font-size: size($iconH);
+          line-height: size($iconH);
+          margin-right: size(20);
+        }
+        .line {
+          width: 0;
+          height: size(50);
+          border: 1px solid #25ED9F;
+          position: absolute;
+          top: size($iconH - 2);
+          left: size($iconH / 2);
+        }
+      }
+    }
     .leagueData-title {
       width: 100%;
-      text-align: center;
-      font-weight: bold;
-      font-size: size(88);
-      line-height: size(132);
-      color: #fff;
+      font-size: size(46);
+      line-height: size(92);
+      @include fc('titleColor');
       margin-bottom: 5%;
+      font-family: 'Manrope-ExtraBold';
     }
     .leagueData-list {
       color: #fff;
       .item {
-        width: 25%;
-        height: size(80);
-        margin-bottom: size(80);
+        // width: 25%;
+        // height: size(80);
+        margin-bottom: size(70);
+        display: block;
         .content {
           width: 100%;
+          @extend .flex-sc;
           .pic {
             width: size(50);
             height: size(50);
-            // padding: size(20);
             border-radius: 100%;
             overflow: hidden;
-            margin: auto;
             img {
               width: 100%;
               display: block;
             }
           }
           .p {
-            text-align: center;
             font-size: size(18);
-            color: #fff;
-            margin-top: size(10);
+            @include fc('titleColor');
+            font-family: 'Manrope-ExtraBold';
+            margin-left: size(20);
           }
         }
+      }
+    }
+  }
+}
+
+.learn-more-btn {
+  height: size($moreHeight);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: size(-1 * $moreHeight / 2);
+  @extend .flex-c;
+  padding: 0 size(15);
+  .btn-more {
+    margin: auto;
+    height: size($moreHeight);
+    width: 100%;
+    max-width: size(600);
+    background: transparent linear-gradient(90deg, #9649F5 0%, #964CF5 24%, #9857F6 46%, #9C69F7 67%, #A183F9 87%, #A698FB 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 12px #00000040;
+    border-radius: 10px;
+    font-size: size(36);
+    font-family: 'Manrope-ExtraBold';
+    color: #fff;
+    line-height: 32px;
+    border: none;
+    span{
+      @extend .flex-c;
+    }
+    .icon {
+      display: inline-block;
+      width: 19px;
+      height: 32px;
+      margin-left: 10%;
+      img {
+        display: block;
+        height: 100%;
       }
     }
   }

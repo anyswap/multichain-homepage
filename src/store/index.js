@@ -1,16 +1,24 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import {getSession, setSession} from './session'
 
 import {getBridgeData} from '@/api'
 
 Vue.use(Vuex)
 
+const ISDARK = 'ISDARK'
+
 export default new Vuex.Store({
   state: {
+    isDark: getSession(1, ISDARK, 0),
     bridgeData: ''
   },
   mutations: {
+    setIsDark (state, data) {
+      state.isDark = data
+      setSession(1, ISDARK, data)
+    },
     setBridgeData (state, data) {
       state.bridgeData = data
     }

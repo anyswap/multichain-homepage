@@ -34,7 +34,7 @@
         </el-col>
         <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="footer-item-info">
-            <div class="logo"><img src="~@/assets/logo.svg" alt="logo"/></div>
+            <div class="logo"><img src="~@/assets/logo-white.png" alt="logo"/></div>
             <div class="content">
               © 2021 Anyswap. All rights reserved.
             </div>
@@ -56,7 +56,7 @@
 .footer-box {
   width: 100%;
   background:#000;
-  padding: size(50) 0;
+  padding: size(80) 0;
   .support-box {
     width: 100%;
     .h3 {
@@ -64,6 +64,7 @@
       font-weight: bold;
       color: #fff;
       margin-bottom: size(15);
+      font-family: 'Manrope-ExtraBold';
     }
     .list {
       .item {
@@ -71,6 +72,7 @@
         a {
           font-size: size(16);
           color: #f2f2f2;
+          font-family: 'Manrope-Regular';
         }
       }
     }
@@ -87,6 +89,7 @@
       padding: size(20) 0;
       font-size: size(14);
       color: #fff;
+      font-family: 'Manrope-Regular';
     }
     .list {
       .item {
