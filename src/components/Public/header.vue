@@ -59,6 +59,7 @@
             color: #fff;
             height: 100%;
             line-height: 100%;
+            font-family: 'Manrope-ExtraBold';
             &:hover {
               color: blue;
             }
@@ -69,7 +70,11 @@
   }
 }
 .is-dark {
-  width: size(36);height: size(36);padding:size(8); @include bg("bg1");border-radius:100%;
+  width: size(36);
+  height: size(36);
+  padding:size(8);
+  border-radius:100%;
+  margin-right: size(10);
   img {
     height: 100%; display: block;
   }

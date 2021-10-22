@@ -170,7 +170,7 @@
       <div class="learn-more-btn">
         <!-- <el-button @click="openUrl('https://anyswap.net/')" class="btn-more flex-c"> -->
         <el-button class="btn-more flex-c">
-          Learn More
+          Free Listing
           <div class="icon">
             <img src="~@/assets/img/arrow_icon.png" />
           </div>
