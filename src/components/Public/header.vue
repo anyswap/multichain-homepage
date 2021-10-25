@@ -4,7 +4,7 @@
   <div class="header-box">
     <div class="container HH100 flex-bc">
       <div class="header-nav flex-sc">
-        <div class="logo">
+        <div class="logo cursorP" @click="toUrl('/')">
           <img src="~@/assets/logo-white.png" v-if="isDark" />
           <img src="~@/assets/logo-white.png" v-else />
         </div>
@@ -12,6 +12,7 @@
       </div>
       <div class="header-right flex-ec">
         <el-menu :default-active="activeIndex" class="nav-box hidden-sm-and-down" mode="horizontal" @select="handleSelect">
+          <!-- <el-menu-item index="route">Swap</el-menu-item> -->
           <el-menu-item :index="index.toString()" v-for="(item, index) in navList" :key="index">{{item.name}}</el-menu-item>
         </el-menu>
         
@@ -43,7 +44,7 @@
 </template>
 
 <style lang="scss">
-$navWH: 36;
+$navWH: 32;
 .header-box {
   width:100%;
   height: size($headerH);
@@ -121,15 +122,15 @@ $navWH: 36;
   }
 }
 .nav-menu {
-  width: size($navWH);height: size($navWH);margin-left:size(5);
+  width: size($navWH);height: size($navWH);margin-right:size(10);
   .el-dropdown {
     width: 100%;height: 100%;
     .el-dropdown-link {
-      width: size($navWH);height: size($navWH);border: 1px solid;@include bdc('inputBdc');border-radius: size(4);padding: size(5) size(5);flex-wrap: wrap;cursor:pointer;
+      width: size($navWH);height: size($navWH);border: 1px solid #fff;border-radius: size(4);padding: size(5) size(5);flex-wrap: wrap;cursor:pointer;
       .line {
         width: 100%;
         height: size(2);
-        @include bg('inputBdc');
+        background: #fff;
         display: block;
         margin: size(1) 0;
       }
@@ -146,8 +147,9 @@ export default {
     return {
       activeIndex: '0',
       navList: [
-        {name: 'Doc', url: 'https://docs.anyswap.exchange/docs/'},
-        {name: 'Github', url: 'https://docs.anyswap.exchange/docs/'},
+        {name: 'Swap', url: '/swap', type: 'link'},
+        {name: 'Doc', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
+        {name: 'Github', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
       ],
       appUrl: 'https://deploy.anyswap.exchange/#/swap',
       langProp: ''
@@ -203,7 +205,11 @@ export default {
       }
     },
     handleSelect (index) {
-      this.$router.push({path: this.navList[index].path})
+      if (this.navList[index].type === 'link') {
+        this.$router.push({path: this.navList[index].url})
+      } else {
+        window.open(this.navList[index].url)
+      }
     },
     handleCommand(command) {
       console.log(command)

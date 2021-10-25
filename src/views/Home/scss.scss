@@ -18,7 +18,7 @@ $moreHeight: 100;
     width:100%;
     height:100%;
     @include bg('bannerBgImg');
-    background-size: auto!important;
+    background-size: contain!important;
   }
   .carousel-bg {
     height: 100%;

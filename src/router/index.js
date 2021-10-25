@@ -3,6 +3,10 @@ import VueRouter from 'vue-router'
 
 import Main from '@c/Main/index.vue'
 
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(error=> error)
+}
 Vue.use(VueRouter)
 
 const routes = [

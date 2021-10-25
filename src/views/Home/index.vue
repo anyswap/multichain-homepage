@@ -161,7 +161,7 @@
                 <div class="pic">
                   <img :src="item.logoUrl" :alt="item.name">
                 </div>
-                <p class="p">{{item.name}}</p>
+                <p class="p" :title="item.name">{{item.symbol}}</p>
               </div>
             </li>
           </el-col>
