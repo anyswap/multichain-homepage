@@ -275,8 +275,8 @@ export default {
           {name: 'Total TVL', count: this.$$.toMillion(tokenlist.data.totalAmount, 2), bg: 'orange', dec: 0},
           // {name: '24h Fees(USD)', count: v2h24Fee + v3h24Fee, bg: 'cyan', dec: 2, fontSize: '36px'},
           // {name: '24h Volume(USD)', count: v2h24Vol + v3h24Vol, bg: 'red', dec: 2, fontSize: '28px'},
-          {name: 'Tokens', count: tokenCont, bg: 'red', dec: 2, fontSize: '28px'},
-          {name: 'Chains', count: chainCont, bg: 'red', dec: 2, fontSize: '28px'},
+          {name: 'Tokens', count: this.$$.thousandBit(tokenCont, 'no'), bg: 'red', dec: 2, fontSize: '28px'},
+          {name: 'Chains', count: this.$$.thousandBit(chainCont, 'no'), bg: 'red', dec: 2, fontSize: '28px'},
         ]
       }
       return []

@@ -104,10 +104,14 @@ export default {
       num = num / Math.pow(10, 3)
       num = this.thousandBit(num, dec)
       num = num + ' K'
-    } else if (num >= 1000000) {
+    } else if (num >= 1000000 && num < 100000000) {
       num = num / Math.pow(10, 6)
       num = this.thousandBit(num, dec)
       num = num + ' M'
+    } else if (num >= 100000000) {
+      num = num / Math.pow(10, 9)
+      num = this.thousandBit(num, dec)
+      num = num + ' B'
     } else {
       num = this.thousandBit(num, dec)
     }
