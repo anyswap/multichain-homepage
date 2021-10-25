@@ -1,10 +1,18 @@
 $cardH: 400;
 $moreHeight: 100;
+
+.box-padding {
+  padding: size(120) 0 size(100);
+  @media screen and (max-width: 960px) {
+    padding: size(60) 0 size(50);
+  }
+}
+
 .carousel-box {
   width: 100%;
-  height: 90%;
+  min-height: 90%;
   width: 100vw;
-  height: 90vh;
+  min-height: 90vh;
   @include bg('bannerBgColor');
   position: relative;
   .carousel-header-box {
@@ -19,6 +27,11 @@ $moreHeight: 100;
     height:100%;
     @include bg('bannerBgImg');
     background-size: contain!important;
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   .carousel-bg {
     height: 100%;
@@ -37,6 +50,9 @@ $moreHeight: 100;
             position: relative;
             padding-top: size($headerH);
             $colW: 200;
+            @media screen and (max-width: 960px) {
+              $colW: 100;
+            }
             .carousel-col {
               width: size($colW);
               height: 80%;
@@ -48,10 +64,9 @@ $moreHeight: 100;
               bottom: 0;
             }
             .carousel-info {
-              position: absolute;
-              left: size($colW / 2);
-              top: 20%;
-              padding-top: size(30);
+              height: 100%;
+              padding-top: size(60);
+              padding-left: size($colW / 2);
               text-align: left;
               h3 {
                 font-size: size(86);
@@ -101,6 +116,9 @@ $moreHeight: 100;
     right: 0;
     bottom: size(-50);
     z-index: 9;
+    @media screen and (max-width: 960px) {
+      bottom: size(0);
+    }
     .bridgeData-list {
       height: 100%;
       color: #fff;
@@ -129,10 +147,6 @@ $moreHeight: 100;
   }
   .mul-introduce-box {
     padding: size(120) 0 size(100);
-    // width: 100%;
-    // min-height: 100%;
-    // width: 100vw;
-    // min-height: 100vh;
     @include bg('contentBgColor1');
     position: relative;
     .mul-introduce-title {
@@ -199,11 +213,7 @@ $moreHeight: 100;
     
   }
   .chainData-box {
-    padding: size(120) 0 size(100);
-    // width: 100%;
-    // min-height: 100%;
-    // width: 100vw;
-    // min-height: 100vh;
+    @extend .box-padding;
     @include bg('contentBgColor2');
     .chainData-title {
       width: 100%;
@@ -247,7 +257,7 @@ $moreHeight: 100;
     }
   }
   .tokenData-box {
-    padding: size(120) 0 size(100);
+    @extend .box-padding;
     @include bg('contentBgColor2');
     position: relative;
     .tokenData-title {
@@ -303,10 +313,6 @@ $moreHeight: 100;
   }
   .leagueData-box {
     @include bg('contentBgColor1');
-    // width: 100%;
-    // min-height: 100%;
-    // width: 100vw;
-    // min-height: 100vh;
     padding: size(50) 0;
     .leagueData-content {
       width: 100%;

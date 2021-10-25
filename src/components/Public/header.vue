@@ -2,7 +2,7 @@
   <!-- <div class="header-box">
   </div> -->
   <div class="header-box">
-    <div class="container HH100 flex-bc">
+    <div class="container-md HH100 flex-bc">
       <div class="header-nav flex-sc">
         <div class="logo cursorP" @click="toUrl('/')">
           <img src="~@/assets/logo-white.png" v-if="isDark" />
@@ -20,6 +20,7 @@
           <img src="~@/assets/img/day.png" v-if="isDark"/>
           <img src="~@/assets/img/night.png" v-else/>
         </div>
+        <el-button @click="openUrl(appUrl)" type="primary" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Enter App</el-button>
         <div class="nav-menu flex-c hidden-md-and-up">
           <!-- <i class="el-icon-s-operation"></i> -->
           <el-dropdown trigger="click" @command="handleCommand">
@@ -35,7 +36,6 @@
             </el-dropdown-menu>
           </el-dropdown>
         </div>
-        <el-button @click="openUrl(appUrl)" type="primary" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Enter App</el-button>
       </div>
     </div>
 
@@ -122,7 +122,9 @@ $navWH: 32;
   }
 }
 .nav-menu {
-  width: size($navWH);height: size($navWH);margin-right:size(10);
+  width: size($navWH);
+  height: size($navWH);
+  margin-left:size(10);
   .el-dropdown {
     width: 100%;height: 100%;
     .el-dropdown-link {
