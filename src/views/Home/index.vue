@@ -167,6 +167,9 @@
           </el-col>
         </el-row>
       </ul>
+      <div class="token-More">
+        and so much more! See all <span class="span">here</span>.
+      </div>
       <div class="learn-more-btn">
         <!-- <el-button @click="openUrl('https://anyswap.net/')" class="btn-more flex-c"> -->
         <el-button class="btn-more flex-c">
