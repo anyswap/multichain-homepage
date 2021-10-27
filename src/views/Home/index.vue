@@ -14,7 +14,7 @@
                   <p class="p2" v-html="item.content1"></p>
                   <div class="carousel-btn flex-sc">
                     <el-button @click="openUrl('https://anyswap.net/')" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Explorer</el-button>
-                    <el-button type="primary" @click="methods('https://stable.anyswap.exchange/')" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button>
+                    <el-button type="primary" @click="openUrl('https://app.anyswap.exchange/')" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button>
                   </div>
                 </div>
               </div>
