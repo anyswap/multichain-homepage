@@ -97,7 +97,7 @@ $navWH: 32;
     height: size($headerH);
     background: none;
     border-bottom:none;
-    @extend .flex-bc;
+    // @extend .flex-bc;
     .el-menu-item, .el-submenu, .el-submenu__title {
       height: size($headerH); background: none;line-height: size($headerH); border-bottom: solid 1px transparent;color: #fff;
     }

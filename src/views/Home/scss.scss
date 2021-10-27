@@ -1,7 +1,16 @@
 $cardH: 400;
-$moreHeight: 100;
 
 $titleFontSize: 46;
+
+$moreHeight: 100;
+$moreHeightSmall: 100;
+
+.moreHeight {
+  height: size($moreHeight);
+  @media screen and (max-width: 960px) {
+    height: size($moreHeightSmall);
+  }
+}
 
 .titleFontSize {
   font-size: size(46);
@@ -13,7 +22,7 @@ $titleFontSize: 46;
 .box-padding {
   padding: size(120) 0 size(100);
   @media screen and (max-width: 960px) {
-    padding: size(60) 0 size(50);
+    padding: size(30) 0 size(20);
   }
 }
 
@@ -28,6 +37,43 @@ $titleFontSize: 46;
   @media screen and (max-width: 960px) {
     font-size: size(24);
     line-height: size(92);
+  }
+}
+
+.icon-box {
+  color: #fff;
+  flex-wrap: wrap;
+  .item {
+    width: 100%;
+    height: size(80);
+    margin-bottom: size(80);
+    .content {
+      width: 100%;
+      .pic {
+        width: size(50);
+        height: size(50);
+        // padding: size(20);
+        border-radius: 100%;
+        overflow: hidden;
+        margin: auto;
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+      .p {
+        text-align: center;
+        font-size: size(18);
+        @include fc('titleColor');
+        margin-top: size(10);
+        font-family: 'Manrope-ExtraBold';
+      }
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .item {
+      margin-bottom: size(30);
+    }
   }
 }
 
@@ -73,9 +119,9 @@ $titleFontSize: 46;
             position: relative;
             padding-top: size($headerH);
             $colW: 200;
-            @media screen and (max-width: 960px) {
-              $colW: 100;
-            }
+            // @media screen and (max-width: 960px) {
+            //   $colW: 100;
+            // }
             .carousel-col {
               width: size($colW);
               height: 80%;
@@ -93,7 +139,7 @@ $titleFontSize: 46;
               text-align: left;
               h3 {
                 font-size: size(86);
-                line-height: size($moreHeight);
+                line-height: size(100);
                 font-family: 'Manrope-Bold';
               }
               .p1 {
@@ -133,15 +179,12 @@ $titleFontSize: 46;
   height: 100%;
   .bridgeData-box {
     // padding: size(30) 0;
-    height: size($moreHeight);
+    @extend .moreHeight;
     position: absolute;
     left:0;
     right: 0;
     bottom: size(-50);
     z-index: 9;
-    @media screen and (max-width: 960px) {
-      bottom: size(0);
-    }
     .bridgeData-list {
       height: 100%;
       color: #fff;
@@ -149,7 +192,7 @@ $titleFontSize: 46;
       @include shadow;
       border-radius: 10px;
       .item {
-        height: size($moreHeight);
+        @extend .moreHeight;
         padding: size(15) size(15) size(20);
         font-family: 'Manrope-ExtraBold';
         h3 {
@@ -165,6 +208,12 @@ $titleFontSize: 46;
           text-align: center;
           color: #9649F5;
         }
+      }
+    }
+    @media screen and (max-width: 960px) {
+      bottom: size(0);
+      .bridgeData-list {
+
       }
     }
   }
@@ -236,35 +285,7 @@ $titleFontSize: 46;
       @extend .title-view;
     }
     .chainData-list {
-      color: #fff;
-      flex-wrap: wrap;
-      .item {
-        width: 100%;
-        height: size(80);
-        margin-bottom: size(80);
-        .content {
-          width: 100%;
-          .pic {
-            width: size(50);
-            height: size(50);
-            // padding: size(20);
-            border-radius: 100%;
-            overflow: hidden;
-            margin: auto;
-            img {
-              width: 100%;
-              display: block;
-            }
-          }
-          .p {
-            text-align: center;
-            font-size: size(18);
-            @include fc('titleColor');
-            margin-top: size(10);
-            font-family: 'Manrope-ExtraBold';
-          }
-        }
-      }
+      @extend .icon-box;
     }
   }
   .tokenData-box {
@@ -275,35 +296,7 @@ $titleFontSize: 46;
       @extend .title-view;
     }
     .tokenData-list {
-      color: #fff;
-      flex-wrap: wrap;
-      .item {
-        width: 100%;
-        height: size(80);
-        margin-bottom: size(80);
-        .content {
-          width: 100%;
-          .pic {
-            width: size(50);
-            height: size(50);
-            // padding: size(20);
-            border-radius: 100%;
-            overflow: hidden;
-            margin: auto;
-            img {
-              width: 100%;
-              display: block;
-            }
-          }
-          .p {
-            text-align: center;
-            font-size: size(18);
-            @include fc('titleColor');
-            margin-top: size(10);
-            font-family: 'Manrope-ExtraBold';
-          }
-        }
-      }
+      @extend .icon-box;
     }
     .token-More {
       font-size: size(16);
@@ -373,8 +366,6 @@ $titleFontSize: 46;
     .leagueData-list {
       color: #fff;
       .item {
-        // width: 25%;
-        // height: size(80);
         margin-bottom: size(70);
         display: block;
         .content {
@@ -403,7 +394,7 @@ $titleFontSize: 46;
 }
 
 .learn-more-btn {
-  height: size($moreHeight);
+  @extend .moreHeight;
   width: 100%;
   position: absolute;
   left: 0;
@@ -413,7 +404,7 @@ $titleFontSize: 46;
   padding: 0 size(15);
   .btn-more {
     margin: auto;
-    height: size($moreHeight);
+    @extend .moreHeight;
     width: 100%;
     max-width: size(600);
     background: transparent linear-gradient(90deg, #9649F5 0%, #964CF5 24%, #9857F6 46%, #9C69F7 67%, #A183F9 87%, #A698FB 100%) 0% 0% no-repeat padding-box;
@@ -439,6 +430,7 @@ $titleFontSize: 46;
     }
   }
   @media screen and (max-width: 960px) {
+    bottom: size(-1 * $moreHeightSmall / 2);
     .btn-more {
       height: size(50);
       font-size: size(18);
