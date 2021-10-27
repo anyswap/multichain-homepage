@@ -5,8 +5,9 @@
     <div class="container-md HH100 flex-bc">
       <div class="header-nav flex-sc">
         <div class="logo cursorP" @click="toUrl('/')">
-          <img src="~@/assets/logo-white.png" v-if="isDark" />
-          <img src="~@/assets/logo-white.png" v-else />
+          <img src="~@/assets/logo-white.png" v-if="isDark" class="hidden-sm-and-down" />
+          <img src="~@/assets/logo-white.png" v-else  class="hidden-sm-and-down"/>
+          <img src="~@/assets/logo-small.png"  class="hidden-sm-and-up"/>
         </div>
 
       </div>

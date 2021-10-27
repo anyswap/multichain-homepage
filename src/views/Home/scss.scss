@@ -1,10 +1,33 @@
 $cardH: 400;
 $moreHeight: 100;
 
+$titleFontSize: 46;
+
+.titleFontSize {
+  font-size: size(46);
+  @media screen and (max-width: 960px) {
+    font-size: size(24);
+  }
+}
+
 .box-padding {
   padding: size(120) 0 size(100);
   @media screen and (max-width: 960px) {
     padding: size(60) 0 size(50);
+  }
+}
+
+.title-view {
+  width: 100%;
+  text-align: center;
+  @extend .titleFontSize;
+  line-height: size(92);
+  @include fc('titleColor');
+  font-family: 'Manrope-ExtraBold';
+  margin-bottom: 3%;
+  @media screen and (max-width: 960px) {
+    font-size: size(24);
+    line-height: size(92);
   }
 }
 
@@ -150,13 +173,7 @@ $moreHeight: 100;
     @include bg('contentBgColor1');
     position: relative;
     .mul-introduce-title {
-      width: 100%;
-      text-align: center;
-      font-size: size(46);
-      line-height: size(92);
-      @include fc('titleColor');
-      margin-bottom: 3%;
-      font-family: 'Manrope-ExtraBold';
+      @extend .title-view;
     }
     .mul-introduce-list {
       color: #fff;
@@ -216,13 +233,7 @@ $moreHeight: 100;
     @extend .box-padding;
     @include bg('contentBgColor2');
     .chainData-title {
-      width: 100%;
-      text-align: center;
-      font-size: size(46);
-      line-height: size(92);
-      @include fc('titleColor');
-      margin-bottom: 5%;
-      font-family: 'Manrope-ExtraBold';
+      @extend .title-view;
     }
     .chainData-list {
       color: #fff;
@@ -261,13 +272,7 @@ $moreHeight: 100;
     @include bg('contentBgColor2');
     position: relative;
     .tokenData-title {
-      width: 100%;
-      text-align: center;
-      font-size: size(46);
-      line-height: size(92);
-      @include fc('titleColor');
-      margin-bottom: 5%;
-      font-family: 'Manrope-ExtraBold';
+      @extend .title-view;
     }
     .tokenData-list {
       color: #fff;
@@ -323,7 +328,7 @@ $moreHeight: 100;
       @include bg('alliancesBgColor');
       box-shadow: 0px 0px 12px #00000040;
       border-radius: 10px;
-      font-size: size(46);
+      @extend .titleFontSize;
       color: #fff;
       line-height: size(66);
       padding: size(50);
@@ -359,12 +364,11 @@ $moreHeight: 100;
       }
     }
     .leagueData-title {
-      width: 100%;
-      font-size: size(46);
-      line-height: size(92);
-      @include fc('titleColor');
-      margin-bottom: 5%;
-      font-family: 'Manrope-ExtraBold';
+      @extend .title-view;
+      text-align: left;
+      @media screen and (max-width: 960px) {
+        text-align: center;
+      }
     }
     .leagueData-list {
       color: #fff;
@@ -431,6 +435,15 @@ $moreHeight: 100;
       img {
         display: block;
         height: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .btn-more {
+      height: size(50);
+      font-size: size(18);
+      .icon {
+        height: 18px;
       }
     }
   }
