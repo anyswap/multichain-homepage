@@ -124,7 +124,7 @@
           <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
             <div class="leagueData-content pl-30">
               <div class="leagueData-title">
-                <h3>Cross-chain Allinces</h3>
+                <h3>Cross-chain Alliances</h3>
               </div>
               <div class="leagueData-list">
                 <el-row :gutter="10" class="">
@@ -199,7 +199,7 @@ export default {
     return {
       bannerList: [
         {
-          title: 'MultiChain<br />MPC Protocol',
+          title: 'MultiChain<br /><span class="bold">MPC</span> Protocol',
           content: 'The Ultimate Router for Web3.',
           content1: 'An infrastructure developed for arbitrary<br />cross-chain interactions.',
         }
@@ -271,8 +271,8 @@ export default {
         this.supportTokenNum = tokenCont
         this.supportChainNum = chainCont
         return [
-          {name: 'Total Volume', count: this.$$.toMillion(v2AllVol + v3AllVol, 2), bg: 'blue', dec: 0},
-          {name: 'Total TVL', count: this.$$.toMillion(tokenlist.data.totalAmount, 2), bg: 'orange', dec: 0},
+          {name: 'Total Volume', count: '$' + this.$$.toMillion(v2AllVol + v3AllVol, 2), bg: 'blue', dec: 0},
+          {name: 'Total TVL', count: '$' + this.$$.toMillion(tokenlist.data.totalAmount, 2), bg: 'orange', dec: 0},
           // {name: '24h Fees(USD)', count: v2h24Fee + v3h24Fee, bg: 'cyan', dec: 2, fontSize: '36px'},
           // {name: '24h Volume(USD)', count: v2h24Vol + v3h24Vol, bg: 'red', dec: 2, fontSize: '28px'},
           {name: 'Tokens', count: this.$$.thousandBit(tokenCont, 'no'), bg: 'red', dec: 2, fontSize: '28px'},

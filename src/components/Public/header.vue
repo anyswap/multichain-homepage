@@ -51,7 +51,7 @@ $navWH: 32;
   height: size($headerH);
   .logo {
     height: 100%;
-    padding: size(10) 0;
+    padding: size(16) 0;
     img {
       height: 100%;
       display: block;;

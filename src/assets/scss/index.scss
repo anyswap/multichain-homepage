@@ -25,6 +25,7 @@
   @include shadow;
   color: #524DFB;
   font-family: 'Manrope-ExtraBold';
+  border: none;
 }
 
 .btn-info {
@@ -32,6 +33,7 @@
   @include shadow;
   color: #1D1D1B;
   font-family: 'Manrope-ExtraBold';
+  border: none;
   &:hover, &:focus {
     background: #25ECA0 0% 0% no-repeat padding-box;
     @include shadow;

@@ -63,7 +63,7 @@ $moreHeightSmall: 100;
       }
       .p {
         text-align: center;
-        font-size: size(18);
+        font-size: size(16);
         @include fc('titleColor');
         margin-top: size(10);
         font-family: 'Manrope-ExtraBold';
@@ -131,16 +131,21 @@ $moreHeightSmall: 100;
               position: absolute;
               left: 0;
               bottom: 0;
+              z-index: -1;
             }
             .carousel-info {
               height: 100%;
               padding-top: size(60);
               padding-left: size($colW / 2);
               text-align: left;
+              z-index: 2;
               h3 {
                 font-size: size(86);
                 line-height: size(100);
-                font-family: 'Manrope-Bold';
+                font-family: 'Manrope-Regular';
+                .bold {
+                  font-family: 'Manrope-Bold';
+                }
               }
               .p1 {
                 font-size: size(28);
@@ -193,7 +198,7 @@ $moreHeightSmall: 100;
       border-radius: 10px;
       .item {
         @extend .moreHeight;
-        padding: size(15) size(15) size(20);
+        padding: size(10) size(15) size(20);
         font-family: 'Manrope-ExtraBold';
         h3 {
           font-size: size(16);
@@ -203,8 +208,8 @@ $moreHeightSmall: 100;
           margin-bottom: size(8);
         }
         p {
-          font-size: size(28);
-          line-height: size(21);
+          font-size: size(38);
+          line-height: size(38);
           text-align: center;
           color: #9649F5;
         }
