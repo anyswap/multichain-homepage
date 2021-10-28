@@ -232,6 +232,8 @@ $moreHeightSmall: 100;
     .mul-introduce-list {
       color: #fff;
       flex-wrap: wrap;
+      overflow: hidden;
+      padding: size(12);
       .el-col {
         padding-top: size(80);
         &:nth-child(2) {

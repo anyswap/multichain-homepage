@@ -5,9 +5,10 @@
     <div class="container-md HH100 flex-bc">
       <div class="header-nav flex-sc">
         <div class="logo cursorP" @click="toUrl('/')">
-          <img src="~@/assets/logo-white.png" v-if="isDark" class="hidden-sm-and-down" />
+          <img src="~@/assets/logo-white.png" />
+          <!-- <img src="~@/assets/logo-white.png" v-if="isDark" class="hidden-sm-and-down" />
           <img src="~@/assets/logo-white.png" v-else  class="hidden-sm-and-down"/>
-          <img src="~@/assets/logo-small.png"  class="hidden-sm-and-up"/>
+          <img src="~@/assets/logo-small.png"  class="hidden-sm-and-up"/> -->
         </div>
 
       </div>
@@ -55,6 +56,9 @@ $navWH: 32;
     img {
       height: 100%;
       display: block;;
+    }
+    @media screen and (max-width: 960px) {
+      padding: size(24) 0;
     }
   }
   .header-nav {
