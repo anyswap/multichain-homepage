@@ -122,7 +122,7 @@
             </div>
           </el-col>
           <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
-            <div class="leagueData-content pl-30">
+            <div class="leagueData-content">
               <div class="leagueData-title">
                 <h3>Cross-chain Alliances</h3>
               </div>

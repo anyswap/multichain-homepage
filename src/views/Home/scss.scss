@@ -36,7 +36,8 @@ $moreHeightSmall: 100;
   margin-bottom: 3%;
   @media screen and (max-width: 960px) {
     font-size: size(24);
-    line-height: size(92);
+    line-height: size(60);
+    // margin-bottom: 1%;
   }
 }
 
@@ -105,6 +106,9 @@ $moreHeightSmall: 100;
   .carousel-bg {
     height: 100%;
     z-index: 8;
+    @media screen and (max-width: 960px) {
+      padding: 0;
+    }
     .carousel-content {
       height: 100%;
       .el-carousel__container {
@@ -119,14 +123,10 @@ $moreHeightSmall: 100;
             position: relative;
             padding-top: size($headerH);
             $colW: 200;
-            // @media screen and (max-width: 960px) {
-            //   $colW: 100;
-            // }
             .carousel-col {
               width: size($colW);
               height: 80%;
               border-radius: 10px 10px 0px 0px;
-              opacity: 0.1;
               @include bg('bannerColBg');
               position: absolute;
               left: 0;
@@ -135,7 +135,8 @@ $moreHeightSmall: 100;
             }
             .carousel-info {
               height: 100%;
-              padding-top: size(60);
+              // padding-top: size(60);
+              padding-top: 10%;
               padding-left: size($colW / 2);
               text-align: left;
               z-index: 2;
@@ -162,14 +163,23 @@ $moreHeightSmall: 100;
                 width: 100%;
                 padding: size(30) 0;
               }
-              @media screen and (max-width: 960px) {
+            }
+            @media screen and (max-width: 960px) {
+              .carousel-col {
+                width: size($colW / 2);
+                height: 85%;
+              }
+              .carousel-info {
+                padding-left: size($colW / 4);
+                padding-top: size(20);
+                padding-top: 15%;
                 h3 {
-                  font-size: size(24);
-                  line-height: size(36);
+                  font-size: size(32);
+                  line-height: size(48);
                 }
                 .p1,.p2 {
-                  font-size: size(16);
-                  line-height: size(24);
+                  font-size: size(24);
+                  line-height: size(36);
                 }
               }
             }
@@ -183,8 +193,7 @@ $moreHeightSmall: 100;
   width: 100%;
   height: 100%;
   .bridgeData-box {
-    // padding: size(30) 0;
-    @extend .moreHeight;
+    height: size($moreHeight);
     position: absolute;
     left:0;
     right: 0;
@@ -197,7 +206,6 @@ $moreHeightSmall: 100;
       @include shadow;
       border-radius: 10px;
       .item {
-        @extend .moreHeight;
         padding: size(10) size(15) size(20);
         font-family: 'Manrope-ExtraBold';
         h3 {
@@ -217,8 +225,18 @@ $moreHeightSmall: 100;
     }
     @media screen and (max-width: 960px) {
       bottom: size(0);
+      height: size(80);
       .bridgeData-list {
-
+        .item {
+          h3 {
+            font-size: size(14);
+            line-height: size(21);
+          }
+          p {
+            font-size: size(24);
+            line-height: size(24);
+          }
+        }
       }
     }
   }
@@ -226,6 +244,9 @@ $moreHeightSmall: 100;
     padding: size(120) 0 size(100);
     @include bg('contentBgColor1');
     position: relative;
+    @media screen and (max-width: 960px) {
+      padding: size(100) 0 size(60);
+    }
     .mul-introduce-title {
       @extend .title-view;
     }
@@ -311,6 +332,7 @@ $moreHeightSmall: 100;
       font-family: 'Manrope-Regular';
       text-align: center;
       margin-bottom: size(50);
+      font-weight: bold;
       .span {
         color: #FF5CB1;
       }
@@ -321,6 +343,10 @@ $moreHeightSmall: 100;
     padding: size(50) 0;
     .leagueData-content {
       width: 100%;
+      padding-left: size(30);
+      @media screen and (max-width: 960px) {
+        padding-left: size(0);
+      }
     }
     .intro {
       width: 100%;
@@ -328,11 +354,16 @@ $moreHeightSmall: 100;
       @include bg('alliancesBgColor');
       box-shadow: 0px 0px 12px #00000040;
       border-radius: 10px;
-      @extend .titleFontSize;
+      // @extend .titleFontSize;
+      font-size: size(46);
       color: #fff;
       line-height: size(66);
       padding: size(50);
       font-family: 'Manrope-ExtraBold';
+      @media screen and (max-width: 960px) {
+        font-size: size(36);
+        line-height: size(56);
+      }
     }
     .steps-box {
       height: size(182);
@@ -368,6 +399,7 @@ $moreHeightSmall: 100;
       text-align: left;
       @media screen and (max-width: 960px) {
         text-align: center;
+        margin-top: size(20);
       }
     }
     .leagueData-list {
@@ -384,7 +416,7 @@ $moreHeightSmall: 100;
             border-radius: 100%;
             overflow: hidden;
             img {
-              width: 100%;
+              height: 100%;
               display: block;
             }
           }
@@ -393,6 +425,16 @@ $moreHeightSmall: 100;
             @include fc('titleColor');
             font-family: 'Manrope-ExtraBold';
             margin-left: size(20);
+          }
+          @media screen and (max-width: 960px) {
+            justify-content: center;
+            flex-wrap: wrap;
+            .p {
+              width: 100%;
+              text-align: center;
+              margin-left: size(0);
+              margin-top: size(10);
+            }
           }
         }
       }

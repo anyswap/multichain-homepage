@@ -2,36 +2,6 @@
   <div class="footer-box">
     <div class="container-md">
       <el-row :gutter="10" class="">
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
-          <div class="support-box">
-            <h3 class="h3">PRODUCTS</h3>
-            <ul class="list">
-              <li class="item"><a href="" target="__blank">Multichain</a></li>
-              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
-              <li class="item"><a href="" target="__blank">API</a></li>
-            </ul>
-          </div>
-        </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
-          <div class="support-box">
-            <h3 class="h3">SUPPORT</h3>
-            <ul class="list">
-              <li class="item"><a href="" target="__blank">Multichain</a></li>
-              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
-              <li class="item"><a href="" target="__blank">API</a></li>
-            </ul>
-          </div>
-        </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
-          <div class="support-box">
-            <h3 class="h3">SUPPORT</h3>
-            <ul class="list">
-              <li class="item"><a href="" target="__blank">Multichain</a></li>
-              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
-              <li class="item"><a href="" target="__blank">API</a></li>
-            </ul>
-          </div>
-        </el-col>
         <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="footer-item-info">
             <div class="logo"><img src="~@/assets/logo-white.png" alt="logo"/></div>
@@ -47,6 +17,45 @@
             </ul>
           </div>
         </el-col>
+        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+          <div class="support-box">
+            <h3 class="h3">
+              PRODUCTS
+              <i class="icon"></i>
+            </h3>
+            <ul class="list">
+              <li class="item"><a href="" target="__blank">Multichain</a></li>
+              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
+              <li class="item"><a href="" target="__blank">API</a></li>
+            </ul>
+          </div>
+        </el-col>
+        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+          <div class="support-box">
+            <h3 class="h3">
+              SUPPORT
+              <i class="icon"></i>
+            </h3>
+            <ul class="list">
+              <li class="item"><a href="" target="__blank">Multichain</a></li>
+              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
+              <li class="item"><a href="" target="__blank">API</a></li>
+            </ul>
+          </div>
+        </el-col>
+        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+          <div class="support-box">
+            <h3 class="h3">
+              SUPPORT
+              <i class="icon"></i>
+            </h3>
+            <ul class="list">
+              <li class="item"><a href="" target="__blank">Multichain</a></li>
+              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
+              <li class="item"><a href="" target="__blank">API</a></li>
+            </ul>
+          </div>
+        </el-col>
       </el-row>
     </div>
   </div>
@@ -59,12 +68,19 @@
   padding: size(80) 0;
   .support-box {
     width: 100%;
+    margin-bottom: size(20);
     .h3 {
-      font-size: size(16);
+      font-size: size(22);
       font-weight: bold;
       color: #fff;
       margin-bottom: size(15);
       font-family: 'Manrope-ExtraBold';
+      .icon {
+        width: size(8);
+        height: size(8);
+        background: #524DFB;
+        display: inline-block;
+      }
     }
     .list {
       .item {
@@ -79,7 +95,7 @@
   }
   .footer-item-info {
     .logo {
-      height: size(60);
+      height: size(33);
       img {
         height: 100%;
         display: block;
@@ -87,14 +103,16 @@
     }
     .content {
       padding: size(20) 0;
-      font-size: size(14);
+      font-size: size(16);
       color: #fff;
       font-family: 'Manrope-Regular';
     }
     .list {
+      margin-bottom: size(20);
       .item {
-        width: size(50);
-        padding: size(10);
+        width: size(30);
+        // padding: size(10);
+        margin-right: size(20);
         img {
           width: 100%;
           display: block;
