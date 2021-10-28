@@ -69,6 +69,7 @@
   .support-box {
     width: 100%;
     margin-bottom: size(20);
+    padding-left: size(30);
     .h3 {
       font-size: size(22);
       font-weight: bold;
@@ -92,6 +93,9 @@
         }
       }
     }
+    @media screen and (max-width: 960px) {
+      padding-left: size(0);
+    }
   }
   .footer-item-info {
     .logo {
@@ -108,7 +112,7 @@
       font-family: 'Manrope-Regular';
     }
     .list {
-      margin-bottom: size(20);
+      margin-bottom: size(40);
       .item {
         width: size(30);
         // padding: size(10);
