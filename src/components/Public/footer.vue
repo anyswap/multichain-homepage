@@ -64,7 +64,7 @@
 <style lang="scss">
 .footer-box {
   width: 100%;
-  background:#000;
+  background:#303846;
   padding: size(80) 0;
   .support-box {
     width: 100%;
