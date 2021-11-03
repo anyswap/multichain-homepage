@@ -160,7 +160,7 @@ export default {
         {name: 'Doc', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
         {name: 'Github', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
       ],
-      appUrl: 'https://deploy.anyswap.exchange/#/swap',
+      appUrl: 'https://app.anyswap.exchange/',
       langProp: ''
     }
   },
@@ -184,6 +184,9 @@ export default {
     this.changeNavList()
   },
   methods: {
+    openUrl (url) {
+      window.open(url)
+    },
     changeNavList () {
       // let arr = routes
       // this.navList = []

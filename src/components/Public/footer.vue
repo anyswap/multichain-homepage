@@ -17,10 +17,10 @@
             </ul>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+        <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="support-box">
             <h3 class="h3">
-              PRODUCTS
+              About US
               <i class="icon"></i>
             </h3>
             <ul class="list">
@@ -30,10 +30,10 @@
             </ul>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+        <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="support-box">
             <h3 class="h3">
-              SUPPORT
+              Links
               <i class="icon"></i>
             </h3>
             <ul class="list">
@@ -43,10 +43,10 @@
             </ul>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+        <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="support-box">
             <h3 class="h3">
-              SUPPORT
+              contact US
               <i class="icon"></i>
             </h3>
             <ul class="list">
@@ -76,6 +76,7 @@
       color: #fff;
       margin-bottom: size(15);
       font-family: 'Manrope-ExtraBold';
+      text-transform: capitalize;
       .icon {
         width: size(8);
         height: size(8);
@@ -95,6 +96,14 @@
     }
     @media screen and (max-width: 960px) {
       padding-left: size(0);
+      .h3 {
+        text-align: center;
+      }
+      .list {
+        .item {
+          text-align: center;
+        }
+      }
     }
   }
   .footer-item-info {
@@ -121,6 +130,17 @@
           width: 100%;
           display: block;
         }
+      }
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .footer-item-info {
+      display: flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      .content {
+        width: 100%;
+        text-align: center;
       }
     }
   }
