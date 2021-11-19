@@ -55,7 +55,7 @@ $moreHeightSmall: 100;
         height: size(50);
         // padding: size(20);
         border-radius: 100%;
-        overflow: hidden;
+        // overflow: hidden;
         margin: auto;
         img {
           width: 100%;
@@ -443,19 +443,21 @@ $moreHeightSmall: 100;
 }
 
 .learn-more-btn {
-  @extend .moreHeight;
+  // @extend .moreHeight;
+  $btn-height: 70;
+  height: size($btn-height);
   width: 100%;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: size(-1 * $moreHeight / 2);
+  bottom: size(-1 * $btn-height / 2);
   @extend .flex-c;
   padding: 0 size(15);
   .btn-more {
     margin: auto;
-    @extend .moreHeight;
+    height: size($btn-height);
     width: 100%;
-    max-width: size(600);
+    max-width: size(470);
     background: transparent linear-gradient(90deg, #9649F5 0%, #964CF5 24%, #9857F6 46%, #9C69F7 67%, #A183F9 87%, #A698FB 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 12px #00000040;
     border-radius: 10px;
@@ -479,7 +481,7 @@ $moreHeightSmall: 100;
     }
   }
   @media screen and (max-width: 960px) {
-    bottom: size(-1 * $moreHeightSmall / 2);
+    bottom: size(-1 * $btn-height / 2);
     .btn-more {
       height: size(50);
       font-size: size(18);

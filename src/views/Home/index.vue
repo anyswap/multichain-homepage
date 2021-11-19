@@ -84,7 +84,8 @@
             <li class="item flex-c">
               <div class="content">
                 <div class="pic">
-                  <img :src="item.logoUrl" :alt="item.name">
+                  <img :src="item.logoUrl" :alt="item.name" v-if="item.logoUrl">
+                  <img :src="require(`../../assets/img/${item.symbol}.png`)" :alt="item.name" v-else>
                 </div>
                 <p class="p">{{item.name}}</p>
               </div>
@@ -211,9 +212,9 @@ export default {
         {logoUrl: require('../../assets/img/chainswap.png'), name: 'Chainswap', url: 'https://chainswap.com/'},
       ],
       mulIntroduce: [
-        {icon: require('../../assets/img/Lock_icon.png'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
-        {icon: require('../../assets/img/Swap_icon.png'), title: 'Native Swap', content: 'Makes it less complicated to cross-chain swap between native tokens for higher liquidity assets. This can be done without wrapped tokens.'},
-        {icon: require('../../assets/img/multichain_icon.png'), title: 'Multichain Router', content: 'Allows users to swap between two chains arbitrarily, which reduces fees and makes it easier to move between chains.'},
+        {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
+        {icon: require('../../assets/img/Swap_icon.svg'), title: 'Native Swap', content: 'Makes it less complicated to cross-chain swap between native tokens for higher liquidity assets. This can be done without wrapped tokens.'},
+        {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multichain Router', content: 'Allows users to swap between two chains arbitrarily, which reduces fees and makes it easier to move between chains.'},
       ],
       supportToken: [],
       supportTokenNum: 0,

@@ -11,7 +11,7 @@ const ISDARK = 'ISDARK'
 
 export default new Vuex.Store({
   state: {
-    isDark: getSession(1, ISDARK, 0),
+    isDark: getSession(1, ISDARK, 1),
     bridgeData: ''
   },
   mutations: {

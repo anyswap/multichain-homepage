@@ -20,7 +20,7 @@
         <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="support-box">
             <h3 class="h3">
-              About US
+              About Us
               <i class="icon"></i>
             </h3>
             <ul class="list">
@@ -46,7 +46,7 @@
         <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="support-box">
             <h3 class="h3">
-              contact US
+              contact Us
               <i class="icon"></i>
             </h3>
             <ul class="list">
@@ -72,7 +72,7 @@
     padding-left: size(30);
     .h3 {
       font-size: size(22);
-      font-weight: bold;
+      // font-weight: bold;
       color: #fff;
       margin-bottom: size(15);
       font-family: 'Manrope-ExtraBold';
