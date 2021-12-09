@@ -160,7 +160,7 @@ export default {
         {name: 'Doc', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
         {name: 'Github', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
       ],
-      appUrl: 'https://app.anyswap.exchange/',
+      appUrl: 'https://app.multichain.tools',
       langProp: ''
     }
   },

@@ -11,10 +11,10 @@
                 <div class="carousel-info">
                   <h3 v-html="item.title"></h3>
                   <p class="p1">{{ item.content }}</p>
-                  <p class="p2" v-html="item.content1"></p>
+                  <!-- <p class="p2" v-html="item.content1"></p> -->
                   <div class="carousel-btn flex-sc">
                     <el-button @click="openUrl('https://anyswap.net/')" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Explorer</el-button>
-                    <el-button type="primary" @click="openUrl('https://app.anyswap.exchange/')" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button>
+                    <el-button type="primary" @click="openUrl('https://app.multichain.tools')" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button>
                   </div>
                 </div>
               </div>
@@ -200,7 +200,7 @@ export default {
     return {
       bannerList: [
         {
-          title: 'MultiChain<br /><span class="bold">MPC</span> Protocol',
+          title: 'MultiChain<br /><span class="bold">Routing</span> Protocol',
           content: 'The Ultimate Router for Web3.',
           content1: 'An infrastructure developed for arbitrary<br />cross-chain interactions.',
         }
@@ -213,8 +213,8 @@ export default {
       ],
       mulIntroduce: [
         {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
-        {icon: require('../../assets/img/Swap_icon.svg'), title: 'Native Swap', content: 'Makes it less complicated to cross-chain swap between native tokens for higher liquidity assets. This can be done without wrapped tokens.'},
-        {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multichain Router', content: 'Allows users to swap between two chains arbitrarily, which reduces fees and makes it easier to move between chains.'},
+        {icon: require('../../assets/img/Swap_icon.svg'), title: 'No-slippage Swap', content: 'Makes it less complicated to cross-chain swap between native tokens for higher liquidity assets. This can be done without wrapped tokens.'},
+        {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multi-Router', content: 'Allows users to swap between two chains arbitrarily, which reduces fees and makes it easier to move between chains.'},
       ],
       supportToken: [],
       supportTokenNum: 0,
