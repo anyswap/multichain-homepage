@@ -206,10 +206,17 @@ export default {
         }
       ],
       supportLeague: [
+        {logoUrl: require('../../assets/img/mim.svg'), name: 'ABRACADABRA.MONEY', url: 'https://abracadabra.money/bridge'},
         {logoUrl: require('../../assets/img/MUL.png'), name: 'Multichain.xyz', url: 'https://multichain.xyz/'},
-        {logoUrl: require('../../assets/img/NRV.svg'), name: 'Nerve.fi', url: 'https://app.nerve.fi/bridge'},
+        // {logoUrl: require('../../assets/img/NRV.svg'), name: 'Nerve.fi', url: 'https://app.nerve.fi/bridge'},
         {logoUrl: require('../../assets/img/Spookyswap.png'), name: 'Spookyswap', url: 'https://spookyswap.finance/bridge'},
-        {logoUrl: require('../../assets/img/chainswap.png'), name: 'Chainswap', url: 'https://chainswap.com/'},
+        {logoUrl: require('../../assets/img/spiritswap_logo.png'), name: 'Spiritswap', url: 'https://swap.spiritswap.finance/#/bridge'},
+        {logoUrl: require('../../assets/img/Solarbeam.png'), name: 'Solarbeam', url: 'https://solarbeam.io/bridge'},
+        {logoUrl: require('../../assets/img/TPT.png'), name: 'Tokenpocket', url: 'https://tokenpocket.pro'},
+        {logoUrl: require('../../assets/img/XY.svg'), name: 'XY.FINANCE', url: 'https://xy.finance'},
+        {logoUrl: require('../../assets/img/dopamineapp.svg'), name: 'Dopamineapp', url: 'https://dopamineapp.com'},
+        {logoUrl: require('../../assets/img/li.png'), name: 'Li.Finance', url: 'https://li.finance'},
+        {logoUrl: require('../../assets/img/movr.png'), name: 'Movr.network', url: 'http://movr.network/'},
       ],
       mulIntroduce: [
         {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
@@ -305,10 +312,15 @@ export default {
         const arr1 = []
         for (const obj of initArr) {
           // console.log(obj.tvl)
-          if (!arr.includes(obj.symbol) && arr.length < 20 && obj.tvl) {
+          if (
+            !arr.includes(obj.symbol)
+            && arr.length < 24
+            && obj.tvl
+            && obj.symbol.indexOf('any') !== 0
+          ) {
             arr.push(obj.symbol)
             arr1.push(obj)
-          } else if (arr.length > 20) {
+          } else if (arr.length > 24) {
             break
           }
         }
