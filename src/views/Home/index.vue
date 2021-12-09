@@ -64,8 +64,8 @@
         </el-row>
       </ul>
       <div class="learn-more-btn">
-        <!-- <el-button @click="openUrl('https://anyswap.net/')" class="btn-more flex-c"> -->
-        <el-button class="btn-more flex-c">
+        <el-button @click="openUrl('https://docs.anyswap.exchange/docs/')" class="btn-more flex-c">
+        <!-- <el-button  class="btn-more flex-c"> -->
           Learn More
           <div class="icon">
             <img src="~@/assets/img/arrow_icon.png" />

@@ -158,7 +158,7 @@ export default {
         {name: 'MULTI', url: '/swap', type: 'link'},
         {name: 'Explorer', url: 'https://anyswap.net/', type: 'outlink'},
         {name: 'Doc', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
-        {name: 'Github', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
+        {name: 'Github', url: 'https://github.com/anyswap', type: 'outlink'},
       ],
       appUrl: 'https://app.multichain.tools',
       langProp: ''
