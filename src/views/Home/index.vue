@@ -169,11 +169,11 @@
         </el-row>
       </ul>
       <div class="token-More">
-        and so much more! See all <span class="span">here</span>.
+        and so much more! See all <span class="span" @click="openUrl('https://anyswap.net/tokens')">here</span>.
       </div>
       <div class="learn-more-btn">
-        <!-- <el-button @click="openUrl('https://anyswap.net/')" class="btn-more flex-c"> -->
-        <el-button class="btn-more flex-c">
+        <el-button @click="openUrl('https://dard6erxu8t.typeform.com/to/C7RwF08A')" class="btn-more flex-c">
+        <!-- <el-button class="btn-more flex-c"> -->
           Free Listing
           <div class="icon">
             <img src="~@/assets/img/arrow_icon.png" />
