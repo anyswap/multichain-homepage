@@ -21,6 +21,8 @@ $themes: (
     bannerBgImg: url('~@/assets/img/bg/banner_white_bg.png') no-repeat right bottom,
     bannerColBg: #4846EE 0% 0% no-repeat padding-box,
 
+    opacityBg: 0.3,
+
     contentBgColor1: #F6F6F6,
     contentBgColor2: #FFFFFF,
 
@@ -34,6 +36,8 @@ $themes: (
     // bannerBgImg: url('~@/assets/img/bg/banner_black_bg.png') no-repeat right,
     bannerBgImg: url('~@/assets/img/bg/banner_white_bg.png') no-repeat right bottom,
     bannerColBg: #394358 0% 0% no-repeat padding-box,
+
+    opacityBg: 0.3,
 
     contentBgColor1: #21263E,
     contentBgColor2: #394358,
@@ -83,5 +87,11 @@ $themes: (
 @mixin bdc($color) {
   @include themeify {
     border-color: themed($color)!important;
+  }
+}
+//获取透明度
+@mixin opacity($color) {
+  @include themeify {
+    opacity: themed($color)!important;
   }
 }

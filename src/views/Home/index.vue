@@ -200,7 +200,7 @@ export default {
     return {
       bannerList: [
         {
-          title: 'MultiChain<br /><span class="bold">Routing</span> Protocol',
+          title: 'Multichain<br /><span class="bold">Routing</span> Protocol',
           content: 'The Ultimate Router for Web3.',
           content1: 'An infrastructure developed for arbitrary<br />cross-chain interactions.',
         }
