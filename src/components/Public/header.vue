@@ -154,8 +154,8 @@ export default {
     return {
       activeIndex: '0',
       navList: [
-        {name: 'Home', url: '/', type: 'link'},
-        {name: 'MULTI', url: '/swap', type: 'link'},
+        // {name: 'Home', url: '/', type: 'link'},
+        {name: 'MULTI', url: 'https://app.multichain.tools/#/multi', type: 'outlink'},
         {name: 'Explorer', url: 'https://anyswap.net/', type: 'outlink'},
         {name: 'Doc', url: 'https://docs.anyswap.exchange/docs/', type: 'outlink'},
         {name: 'Github', url: 'https://github.com/anyswap', type: 'outlink'},

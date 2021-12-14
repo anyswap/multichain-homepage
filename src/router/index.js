@@ -27,23 +27,10 @@ const routes = [
     //   }
     // ]
   },
-  {
-    path: '/swap',
-    component: resolve => require.ensure([], () => resolve(require('@/views/Swap/index.vue')) , 'Multichain-index')
-  //   meta: {
-  //     notCache: true
-  //   },
-  //   children: [
-  //     {
-  //       path: '/',
-  //       meta: {
-  //         label: 'home',
-  //         isViewNav: 1
-  //       },
-  //       component: resolve => require.ensure([], () => resolve(require('@/views/Swap/index.vue')) , 'Multichain-index')
-  //     }
-  //   ]
-  }
+  // {
+  //   path: '/swap',
+  //   component: resolve => require.ensure([], () => resolve(require('@/views/Swap/index.vue')) , 'Multichain-index')
+  // }
 ]
 
 const router = new VueRouter({
