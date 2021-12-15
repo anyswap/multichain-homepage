@@ -144,7 +144,7 @@ export default {
           title: 'Company',
           list: [
             {name: 'About us', url: 'https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/'},
-            {name: 'Careers', url: ''},
+            {name: 'Careers', url: 'https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/c/Bhq0grPeUKIZ2LNheNvy/careers'},
             {name: 'Blog', url: 'https://anyswap.medium.com/'},
           ]
         },

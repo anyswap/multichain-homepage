@@ -102,9 +102,20 @@
           <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
             <div class="leagueData-content">
               <div class="intro">
-                Developed<br />{{supportTokenNum}}+ Projects<br />& {{chainInfo.length}} Chains
+                Integrations<br />{{supportTokenNum}}+ Projects<br />& {{chainInfo.length}} Chains
               </div>
               <div class="steps-box">
+                
+                <div class="step">
+                  <i class="icon el-icon-success"></i>
+                  <p>Free listing</p>
+                  <div class="line"></div>
+                </div>
+                <div class="step">
+                  <i class="icon el-icon-success"></i>
+                  <p>Easy integration</p>
+                  <div class="line"></div>
+                </div>
                 <div class="step">
                   <i class="icon el-icon-success"></i>
                   <p>Fastest transaction speed</p>
@@ -113,11 +124,6 @@
                 <div class="step">
                   <i class="icon el-icon-success"></i>
                   <p>Free deposit</p>
-                  <div class="line"></div>
-                </div>
-                <div class="step">
-                  <i class="icon el-icon-success"></i>
-                  <p>Free listing</p>
                 </div>
               </div>
             </div>
@@ -125,7 +131,7 @@
           <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
             <div class="leagueData-content">
               <div class="leagueData-title">
-                <h3>Cross-chain Alliances</h3>
+                <h3>Cross-Chain Ecosystem</h3>
               </div>
               <div class="leagueData-list">
                 <el-row :gutter="10" class="">
@@ -221,7 +227,7 @@ export default {
       mulIntroduce: [
         {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
         {icon: require('../../assets/img/Swap_icon.svg'), title: 'No-slippage Swap', content: "Multichain’s 1:1 swap enables users to perform 0 slippage transfers and eliminate the hidden cost associated with AMM."},
-        {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multi-Router', content: 'Multichain Router: Allows users to swap between any two chains freely! It reduces fees and makes it easier to move between chains!'},
+        {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multichain Router', content: 'Multichain Router allows users to swap between any two chains freely. It reduces fees and makes it easier to move between chains.'},
       ],
       supportToken: [],
       supportTokenNum: 0,
