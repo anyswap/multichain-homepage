@@ -108,6 +108,11 @@
                 
                 <div class="step">
                   <i class="icon el-icon-success"></i>
+                  <p>Multichain tokens</p>
+                  <div class="line"></div>
+                </div>
+                <div class="step">
+                  <i class="icon el-icon-success"></i>
                   <p>Free listing</p>
                   <div class="line"></div>
                 </div>
@@ -118,12 +123,7 @@
                 </div>
                 <div class="step">
                   <i class="icon el-icon-success"></i>
-                  <p>Fastest transaction speed</p>
-                  <div class="line"></div>
-                </div>
-                <div class="step">
-                  <i class="icon el-icon-success"></i>
-                  <p>Free deposit</p>
+                  <p>Quick deployment</p>
                 </div>
               </div>
             </div>
