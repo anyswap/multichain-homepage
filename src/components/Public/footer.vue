@@ -154,7 +154,7 @@ export default {
         {name: '', url: 'https://t.me/anyswap', logo: require('../../assets/img/telegram-white.svg')},
         {name: '', url: 'https://medium.com/@anyswap', logo: require('../../assets/img/medium-white.svg')},
         {name: '', url: 'https://twitter.com/AnyswapNetwork', logo: require('../../assets/img/twitter-white.svg')},
-        {name: '', url: 'https://github.com/anyswap', logo: require('../../assets/img/github-white.png')},
+        {name: '', url: this.$$.githubUrl, logo: require('../../assets/img/github-white.png')},
         {name: '', url: 'https://coinmarketcap.com/currencies/anyswap/', logo: require('../../assets/img/coinmarketcap-white.png')},
         {name: '', url: 'https://www.coingecko.com/en/coins/anyswap', logo: require('../../assets/img/coingecko-white.png')}
       ]

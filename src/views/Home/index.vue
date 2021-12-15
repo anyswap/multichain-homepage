@@ -13,8 +13,8 @@
                   <p class="p1">{{ item.content }}</p>
                   <!-- <p class="p2" v-html="item.content1"></p> -->
                   <div class="carousel-btn flex-sc">
-                    <el-button @click="openUrl('https://anyswap.net/')" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Explorer</el-button>
-                    <el-button type="primary" @click="openUrl('https://app.multichain.tools')" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button>
+                    <el-button @click="openUrl($$.explorerUrl)" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Explorer</el-button>
+                    <el-button type="primary" @click="openUrl($$.enterApp)" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button>
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@
         </el-row>
       </ul>
       <div class="learn-more-btn">
-        <el-button @click="openUrl('https://docs.anyswap.exchange/docs/')" class="btn-more flex-c">
+        <el-button @click="openUrl($$.githubUrl)" class="btn-more flex-c">
         <!-- <el-button  class="btn-more flex-c"> -->
           Learn More
           <div class="icon">
@@ -169,7 +169,7 @@
         </el-row>
       </ul>
       <div class="token-More">
-        and so much more! See all <span class="span" @click="openUrl('https://anyswap.net/tokens')">here</span>.
+        and so much more! See all <span class="span" @click="openUrl($$.explorerUrl + '/tokens')">here</span>.
       </div>
       <div class="learn-more-btn">
         <el-button @click="openUrl('https://dard6erxu8t.typeform.com/to/C7RwF08A')" class="btn-more flex-c">
@@ -303,6 +303,7 @@ export default {
     }
   },
   mounted () {
+    console.log(this.$$)
     this.initToken()
   },
   methods: {

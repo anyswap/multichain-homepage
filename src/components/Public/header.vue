@@ -155,12 +155,12 @@ export default {
       activeIndex: '0',
       navList: [
         // {name: 'Home', url: '/', type: 'link'},
-        {name: 'MULTI', url: 'https://app.multichain.tools/#/multi', type: 'outlink'},
-        {name: 'Explorer', url: 'https://anyswap.net/', type: 'outlink'},
-        {name: 'Docs', url: 'https://docs.multichain.org/', type: 'outlink'},
-        {name: 'Github', url: 'https://github.com/anyswap', type: 'outlink'},
+        {name: 'MULTI', url: this.$$.enterApp + '/#/multi', type: 'outlink'},
+        {name: 'Explorer', url: this.$$.explorerUrl, type: 'outlink'},
+        {name: 'Docs', url: this.$$.docUrl, type: 'outlink'},
+        {name: 'Github', url: this.$$.githubUrl, type: 'outlink'},
       ],
-      appUrl: 'https://app.multichain.tools',
+      appUrl: this.$$.enterApp,
       langProp: ''
     }
   },

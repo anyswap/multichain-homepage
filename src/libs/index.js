@@ -1,6 +1,7 @@
 import { ethers } from 'ethers'
-
+import config from '@/config'
 export default {
+  ...config,
   smallToBigSort (propertyArray) {
     let levelCount = propertyArray.length
 
