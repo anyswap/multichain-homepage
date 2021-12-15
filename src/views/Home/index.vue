@@ -64,7 +64,7 @@
         </el-row>
       </ul>
       <div class="learn-more-btn">
-        <el-button @click="openUrl($$.github)" class="btn-more flex-c">
+        <el-button @click="openUrl($$.docUrl)" class="btn-more flex-c">
         <!-- <el-button  class="btn-more flex-c"> -->
           Learn More
           <div class="icon">
