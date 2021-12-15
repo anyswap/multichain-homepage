@@ -2,7 +2,7 @@
   <div class="footer-box">
     <div class="container-md">
       <el-row :gutter="10" class="">
-        <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
+        <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
           <div class="footer-item-info">
             <div class="logo"><img src="~@/assets/logo-white.png" alt="logo"/></div>
             <div class="content">
@@ -17,40 +17,14 @@
             </ul>
           </div>
         </el-col>
-        <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
+        <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4" v-for="(items, indexs) in footerList" :key="indexs">
           <div class="support-box">
             <h3 class="h3">
-              Company
+              {{items.title}}
               <i class="icon"></i>
             </h3>
             <ul class="list">
-              <li class="item"><a href="https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/" target="__blank">About us</a></li>
-              <li class="item"><a href="" target="__blank">Careers</a></li>
-              <li class="item"><a href="https://anyswap.medium.com/" target="__blank">Blog</a></li>
-            </ul>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
-          <div class="support-box">
-            <h3 class="h3">
-              Help
-              <i class="icon"></i>
-            </h3>
-            <ul class="list">
-              <li class="item"><a href="https://anyswaphelp.zendesk.com/" target="__blank">Support</a></li>
-              <li class="item"><a href="https://docs.multichain.org/faq" target="__blank">FAQ</a></li>
-            </ul>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
-          <div class="support-box">
-            <h3 class="h3">
-              contact Us
-              <i class="icon"></i>
-            </h3>
-            <ul class="list">
-              <li class="item"><a href="mailto:connect@anyswap.exchange" target="__blank">Contact</a></li>
-              <li class="item"><a href="mailto:listing@anyswap.exchange" target="__blank">listing</a></li>
+              <li class="item" v-for="(item, index) in items.list" :key="index"><a :href="item.url" target="__blank">{{item.name}}</a></li>
             </ul>
           </div>
         </el-col>
@@ -59,7 +33,14 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.el-row {
+  @media only screen and (min-width: 992px) {
+    .el-col-md-4-8,.el-col-xl-4-8,.el-col-lg-4-8 {
+      width:20%;
+    }
+  }
+}
 .footer-box {
   width: 100%;
   background:#303846;
@@ -157,6 +138,38 @@ export default {
         {name: '', url: this.$$.github, logo: require('../../assets/img/github-white.png')},
         {name: '', url: this.$$.coinmarketcap, logo: require('../../assets/img/coinmarketcap-white.png')},
         {name: '', url: this.$$.coingecko, logo: require('../../assets/img/coingecko-white.png')}
+      ],
+      footerList: [
+        {
+          title: 'Company',
+          list: [
+            {name: 'About us', url: 'https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/'},
+            {name: 'Careers', url: ''},
+            {name: 'Blog', url: 'https://anyswap.medium.com/'},
+          ]
+        },
+        {
+          title: 'Help',
+          list: [
+            {name: 'Support', url: 'https://anyswaphelp.zendesk.com/'},
+            {name: 'FAQ', url: 'https://docs.multichain.org/faq'},
+          ]
+        },
+        {
+          title: 'contact Us',
+          list: [
+            {name: 'Contact', url: 'mailto:connect@anyswap.exchange'},
+            {name: 'Listing', url: 'mailto:listing@anyswap.exchange'},
+          ]
+        },
+        {
+          title: 'Developers',
+          list: [
+            {name: 'Dev support', url: 'https://docs.multichain.org/developer-guide'},
+            {name: 'Bug bounty', url: 'https://docs.multichain.org/security/bug-bounty'},
+            {name: 'Security', url: 'https://docs.multichain.org/security/security-model'},
+          ]
+        }
       ]
     }
   }
