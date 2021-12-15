@@ -200,7 +200,7 @@ export default {
     return {
       bannerList: [
         {
-          title: 'Multichain<br /><span class="bold">Routing</span> Protocol',
+          title: 'Multichain<br /><span class="bold">Rotuter</span> Protocol',
           content: 'The Ultimate Router for Web3.',
           content1: 'An infrastructure developed for arbitrary<br />cross-chain interactions.',
         }
@@ -220,8 +220,8 @@ export default {
       ],
       mulIntroduce: [
         {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
-        {icon: require('../../assets/img/Swap_icon.svg'), title: 'No-slippage Swap', content: 'Makes it less complicated to cross-chain swap between native tokens for higher liquidity assets. This can be done without wrapped tokens.'},
-        {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multi-Router', content: 'Allows users to swap between two chains arbitrarily, which reduces fees and makes it easier to move between chains.'},
+        {icon: require('../../assets/img/Swap_icon.svg'), title: 'No-slippage Swap', content: 'The unique Multichain Router routing mechanism makes 0 slippage swap possible and it can be done without warped tokens.'},
+        {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multi-Router', content: 'Multichain Router: Allows users to swap between any two chains freely! It reduces fees and makes it easier to move between chains!'},
       ],
       supportToken: [],
       supportTokenNum: 0,
@@ -230,7 +230,18 @@ export default {
   },
   computed: {
     chainInfo () {
-      return this.$store.state.bridgeData ? this.$store.state.bridgeData.chainlist.data : {}
+      // console.log(this.$store.state.bridgeData.chainlist.data)
+      const arr = []
+      if (this.$store.state.bridgeData) {
+        const list = this.$store.state.bridgeData.chainlist.data
+        for (const obj in list) {
+          arr.push(list[obj])
+        }
+      }
+      arr.sort(this.$$.smallToBigSort(['name']))
+      // console.log(arr)
+      return arr
+      // return this.$store.state.bridgeData ? this.$store.state.bridgeData.chainlist.data.sort(this.$$.bigToSmallSort(['name'])) : {}
     },
     tokenInfo () {
       return this.$store.state.bridgeData ? this.$store.state.bridgeData.tokenlist.data.bridgeList : []

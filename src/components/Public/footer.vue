@@ -6,7 +6,7 @@
           <div class="footer-item-info">
             <div class="logo"><img src="~@/assets/logo-white.png" alt="logo"/></div>
             <div class="content">
-              © 2021 Anyswap. All rights reserved.
+              © 2021 Multichain. All rights reserved.
             </div>
             <ul class="list flex-sc">
               <li class="item" v-for="(item, index) in network" :key="index">
@@ -20,26 +20,25 @@
         <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="support-box">
             <h3 class="h3">
-              About Us
+              Company
               <i class="icon"></i>
             </h3>
             <ul class="list">
-              <li class="item"><a href="" target="__blank">Multichain</a></li>
-              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
-              <li class="item"><a href="" target="__blank">API</a></li>
+              <li class="item"><a href="" target="__blank">About us</a></li>
+              <li class="item"><a href="" target="__blank">Careers</a></li>
+              <li class="item"><a href="" target="__blank">Blog</a></li>
             </ul>
           </div>
         </el-col>
         <el-col :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
           <div class="support-box">
             <h3 class="h3">
-              Links
+              Help
               <i class="icon"></i>
             </h3>
             <ul class="list">
-              <li class="item"><a href="" target="__blank">Multichain</a></li>
-              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
-              <li class="item"><a href="" target="__blank">API</a></li>
+              <li class="item"><a href="" target="__blank">Support</a></li>
+              <li class="item"><a href="" target="__blank">FAQ</a></li>
             </ul>
           </div>
         </el-col>
@@ -50,9 +49,8 @@
               <i class="icon"></i>
             </h3>
             <ul class="list">
-              <li class="item"><a href="" target="__blank">Multichain</a></li>
-              <li class="item"><a href="" target="__blank">Kashi Lending</a></li>
-              <li class="item"><a href="" target="__blank">API</a></li>
+              <li class="item"><a href="" target="__blank">Contact</a></li>
+              <li class="item"><a href="https://dard6erxu8t.typeform.com/to/C7RwF08A" target="__blank">listing</a></li>
             </ul>
           </div>
         </el-col>

@@ -80,9 +80,10 @@ $moreHeightSmall: 100;
 
 .carousel-box {
   width: 100%;
-  min-height: 90%;
   width: 100vw;
-  min-height: 90vh;
+  height: 90%;
+  height: 90vh;
+  min-height: 600px;
   @include bg('bannerBgColor');
   position: relative;
   .carousel-header-box {
