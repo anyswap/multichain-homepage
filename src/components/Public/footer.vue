@@ -2,7 +2,7 @@
   <div class="footer-box">
     <div class="container-md">
       <el-row :gutter="10" class="">
-        <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
+        <el-col :xs="24" :sm="24" :md="9" :lg="9" :xl="9">
           <div class="footer-item-info">
             <div class="logo"><img src="~@/assets/logo-white.png" alt="logo"/></div>
             <div class="content">
@@ -17,7 +17,7 @@
             </ul>
           </div>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4" v-for="(items, indexs) in footerList" :key="indexs">
+        <el-col :xs="24" :sm="24" :md="5" :lg="5" :xl="5" v-for="(items, indexs) in footerList" :key="indexs">
           <div class="support-box">
             <h3 class="h3">
               {{items.title}}
@@ -65,7 +65,7 @@
     }
     .list {
       .item {
-        padding:size(5) 0;
+        padding:size(3) 0;
         a {
           font-size: size(16);
           color: #f2f2f2;
@@ -141,33 +141,36 @@ export default {
       ],
       footerList: [
         {
-          title: 'Company',
+          title: 'About',
           list: [
-            {name: 'About us', url: 'https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/'},
-            {name: 'Careers', url: 'https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/c/Bhq0grPeUKIZ2LNheNvy/careers'},
             {name: 'Blog', url: 'https://anyswap.medium.com/'},
-          ]
-        },
-        {
-          title: 'Help',
-          list: [
-            {name: 'Support', url: 'https://anyswaphelp.zendesk.com/'},
             {name: 'FAQ', url: 'https://docs.multichain.org/faq'},
-          ]
-        },
-        {
-          title: 'contact Us',
-          list: [
-            {name: 'Contact', url: 'mailto:connect@anyswap.exchange'},
-            {name: 'Listing', url: 'mailto:listing@anyswap.exchange'},
+            {name: 'Github', url: this.$$.github},
+            {name: 'Docs', url: this.$$.docUrl},
+            {name: 'Brand Assets', url: 'https://github.com/anyswap/Brand-assets'},
+            {name: 'Careers', url: 'https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/c/Bhq0grPeUKIZ2LNheNvy/careers'},
           ]
         },
         {
           title: 'Developers',
           list: [
-            {name: 'Dev support', url: 'https://docs.multichain.org/developer-guide'},
+            {name: 'Listing', url: 'mailto:listing@anyswap.exchange'},
+            {name: 'Support', url: 'https://anyswaphelp.zendesk.com/'},
+            {name: 'Dev docs', url: 'https://docs.multichain.org/developer-guide'},
+            {name: 'Audit', url: 'https://docs.multichain.org/security/security-model'},
             {name: 'Bug bounty', url: 'https://docs.multichain.org/security/bug-bounty'},
-            {name: 'Security', url: 'https://docs.multichain.org/security/security-model'},
+            {name: 'Contact', url: 'mailto:connect@anyswap.exchange'},
+          ]
+        },
+        {
+          title: 'Product',
+          list: [
+            {name: 'Router', url: this.$$.enterApp},
+            {name: 'Explorer', url: this.$$.explorerUrl},
+            {name: 'Network', url: this.$$.explorerUrl + '/network'},
+            {name: 'Governance', url: 'https://vote.anyswap.exchange/'},
+            {name: 'Dashboard', url: this.$$.explorerUrl + '/dashboard'},
+            {name: 'Tools', url: this.$$.explorerUrl + '?tabparams=tools'},
           ]
         }
       ]

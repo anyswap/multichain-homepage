@@ -175,7 +175,7 @@
         </el-row>
       </ul>
       <div class="token-More">
-        and so much more! See all <span class="span" @click="openUrl($$.explorerUrl + '/tokens')">here</span>.
+        See all <span class="span cursorP" @click="openUrl($$.explorerUrl + '/tokens')">here</span>.
       </div>
       <div class="learn-more-btn">
         <el-button @click="openUrl('https://dard6erxu8t.typeform.com/to/C7RwF08A')" class="btn-more flex-c">
