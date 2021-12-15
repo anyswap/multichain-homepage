@@ -102,7 +102,7 @@
           <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
             <div class="leagueData-content">
               <div class="intro">
-                Developed<br />{{supportTokenNum}}+ Projects<br />& {{supportChainNum}} Chains
+                Developed<br />{{supportTokenNum}}+ Projects<br />& {{chainInfo.length}} Chains
               </div>
               <div class="steps-box">
                 <div class="step">
@@ -200,8 +200,8 @@ export default {
     return {
       bannerList: [
         {
-          title: 'Multichain<br /><span class="bold">Rotuter</span> Protocol',
-          content: 'The Ultimate Router for Web3.',
+          title: 'Multichain<br /><span class="bold">Router</span> Protocol',
+          content: 'The Ultimate Router for Web3.0',
           content1: 'An infrastructure developed for arbitrary<br />cross-chain interactions.',
         }
       ],
@@ -225,7 +225,6 @@ export default {
       ],
       supportToken: [],
       supportTokenNum: 0,
-      supportChainNum: 0,
     }
   },
   computed: {
@@ -235,11 +234,12 @@ export default {
       if (this.$store.state.bridgeData) {
         const list = this.$store.state.bridgeData.chainlist.data
         for (const obj in list) {
+          if (list[obj].networkType === "TESTNET") continue
           arr.push(list[obj])
         }
       }
       arr.sort(this.$$.smallToBigSort(['name']))
-      // console.log(arr)
+      
       return arr
       // return this.$store.state.bridgeData ? this.$store.state.bridgeData.chainlist.data.sort(this.$$.bigToSmallSort(['name'])) : {}
     },
@@ -250,7 +250,7 @@ export default {
       if (this.$store.state.bridgeData) {
         const v2 = this.$store.state.bridgeData.stats
         const v3 = this.$store.state.bridgeData.stable
-        const chainlist = this.$store.state.bridgeData.chainlist
+        // const chainlist = this.chainInfo
         const tokenlist = this.$store.state.bridgeData.tokenlist
         let v2h24Txns = 0
         let v2h24Users = 0
@@ -284,18 +284,14 @@ export default {
         if (tokenlist.status === 200) {
           tokenCont = Number(tokenlist.data.bridgeNum)
         }
-        if (chainlist.status === 200) {
-          chainCont = Object.keys(chainlist.data).length
-        }
         this.supportTokenNum = tokenCont
-        this.supportChainNum = chainCont
         return [
           {name: 'Total Volume', count: '$' + this.$$.toMillion(v2AllVol + v3AllVol, 2), bg: 'blue', dec: 0},
           {name: 'Total TVL', count: '$' + this.$$.toMillion(tokenlist.data.totalAmount, 2), bg: 'orange', dec: 0},
           // {name: '24h Fees(USD)', count: v2h24Fee + v3h24Fee, bg: 'cyan', dec: 2, fontSize: '36px'},
           // {name: '24h Volume(USD)', count: v2h24Vol + v3h24Vol, bg: 'red', dec: 2, fontSize: '28px'},
           {name: 'Tokens', count: this.$$.thousandBit(tokenCont, 'no'), bg: 'red', dec: 2, fontSize: '28px'},
-          {name: 'Chains', count: this.$$.thousandBit(chainCont, 'no'), bg: 'red', dec: 2, fontSize: '28px'},
+          {name: 'Chains', count: this.$$.thousandBit(this.chainInfo.length, 'no'), bg: 'red', dec: 2, fontSize: '28px'},
         ]
       }
       return []
