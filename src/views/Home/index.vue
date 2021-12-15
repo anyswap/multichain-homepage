@@ -220,7 +220,7 @@ export default {
       ],
       mulIntroduce: [
         {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
-        {icon: require('../../assets/img/Swap_icon.svg'), title: 'No-slippage Swap', content: "Multichain’s 1:1 swap enables users to perform 0 slippage transfers and reduce the hidden costs associated with AMM's significantly."},
+        {icon: require('../../assets/img/Swap_icon.svg'), title: 'No-slippage Swap', content: "Multichain’s 1:1 swap enables users to perform 0 slippage transfers and eliminate the hidden cost associated with AMM."},
         {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multi-Router', content: 'Multichain Router: Allows users to swap between any two chains freely! It reduces fees and makes it easier to move between chains!'},
       ],
       supportToken: [],
