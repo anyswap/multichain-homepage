@@ -24,9 +24,9 @@
               <i class="icon"></i>
             </h3>
             <ul class="list">
-              <li class="item"><a href="" target="__blank">About us</a></li>
+              <li class="item"><a href="https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/" target="__blank">About us</a></li>
               <li class="item"><a href="" target="__blank">Careers</a></li>
-              <li class="item"><a href="" target="__blank">Blog</a></li>
+              <li class="item"><a href="https://anyswap.medium.com/" target="__blank">Blog</a></li>
             </ul>
           </div>
         </el-col>
@@ -38,7 +38,7 @@
             </h3>
             <ul class="list">
               <li class="item"><a href="" target="__blank">Support</a></li>
-              <li class="item"><a href="" target="__blank">FAQ</a></li>
+              <li class="item"><a href="https://docs.multichain.org/faq" target="__blank">FAQ</a></li>
             </ul>
           </div>
         </el-col>
