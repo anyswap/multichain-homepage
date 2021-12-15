@@ -158,7 +158,7 @@ export default {
         {name: 'MULTI', url: this.$$.enterApp + '/#/multi', type: 'outlink'},
         {name: 'Explorer', url: this.$$.explorerUrl, type: 'outlink'},
         {name: 'Docs', url: this.$$.docUrl, type: 'outlink'},
-        {name: 'Github', url: this.$$.githubUrl, type: 'outlink'},
+        {name: 'Github', url: this.$$.github, type: 'outlink'},
       ],
       appUrl: this.$$.enterApp,
       langProp: ''

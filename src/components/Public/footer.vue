@@ -151,12 +151,12 @@ export default {
   data () {
     return {
       network: [
-        {name: '', url: 'https://t.me/anyswap', logo: require('../../assets/img/telegram-white.svg')},
-        {name: '', url: 'https://medium.com/@anyswap', logo: require('../../assets/img/medium-white.svg')},
-        {name: '', url: 'https://twitter.com/AnyswapNetwork', logo: require('../../assets/img/twitter-white.svg')},
-        {name: '', url: this.$$.githubUrl, logo: require('../../assets/img/github-white.png')},
-        {name: '', url: 'https://coinmarketcap.com/currencies/anyswap/', logo: require('../../assets/img/coinmarketcap-white.png')},
-        {name: '', url: 'https://www.coingecko.com/en/coins/anyswap', logo: require('../../assets/img/coingecko-white.png')}
+        {name: '', url: this.$$.telegram, logo: require('../../assets/img/telegram-white.svg')},
+        {name: '', url: this.$$.medium, logo: require('../../assets/img/medium-white.svg')},
+        {name: '', url: this.$$.twitter, logo: require('../../assets/img/twitter-white.svg')},
+        {name: '', url: this.$$.github, logo: require('../../assets/img/github-white.png')},
+        {name: '', url: this.$$.coinmarketcap, logo: require('../../assets/img/coinmarketcap-white.png')},
+        {name: '', url: this.$$.coingecko, logo: require('../../assets/img/coingecko-white.png')}
       ]
     }
   }
