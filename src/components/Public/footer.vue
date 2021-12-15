@@ -37,7 +37,7 @@
               <i class="icon"></i>
             </h3>
             <ul class="list">
-              <li class="item"><a href="" target="__blank">Support</a></li>
+              <li class="item"><a href="https://anyswaphelp.zendesk.com/" target="__blank">Support</a></li>
               <li class="item"><a href="https://docs.multichain.org/faq" target="__blank">FAQ</a></li>
             </ul>
           </div>
@@ -49,8 +49,8 @@
               <i class="icon"></i>
             </h3>
             <ul class="list">
-              <li class="item"><a href="" target="__blank">Contact</a></li>
-              <li class="item"><a href="https://dard6erxu8t.typeform.com/to/C7RwF08A" target="__blank">listing</a></li>
+              <li class="item"><a href="mailto:connect@anyswap.exchange" target="__blank">Contact</a></li>
+              <li class="item"><a href="mailto:listing@anyswap.exchange" target="__blank">listing</a></li>
             </ul>
           </div>
         </el-col>
