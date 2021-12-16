@@ -27,7 +27,7 @@
             <div class="bridgeData-list">
               <el-row :gutter="10" class="">
                 <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6" v-for="(item, index) in bridgeData" :key="index">
-                  <div class="item">
+                  <div class="item cursorP" @click="openUrl($$.explorerUrl + '/dashboard')">
                     <h3>
                       {{item.name}}
                     </h3>

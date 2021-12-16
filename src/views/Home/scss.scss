@@ -180,8 +180,9 @@ $moreHeightSmall: 100;
                   line-height: size(48);
                 }
                 .p1,.p2 {
-                  font-size: size(28);
+                  font-size: size(22);
                   line-height: size(42);
+                  margin-top: 20px;
                 }
               }
             }
@@ -368,7 +369,7 @@ $moreHeightSmall: 100;
       }
     }
     .steps-box {
-      height: size(182);
+      height: size(282);
       margin-top: size(50);
       position: relative;
       padding-left: size(50);
@@ -423,10 +424,14 @@ $moreHeightSmall: 100;
             }
           }
           .p {
+            // @extend .flex-sc;
+            // flex-wrap: wrap;
             font-size: size(18);
             @include fc('titleColor');
             font-family: 'Manrope-ExtraBold';
             margin-left: size(20);
+            word-wrap:break-word;
+            // height: size(50);
           }
           @media screen and (max-width: 960px) {
             justify-content: center;
@@ -436,6 +441,7 @@ $moreHeightSmall: 100;
               text-align: center;
               margin-left: size(0);
               margin-top: size(10);
+              height: size(50);
             }
           }
         }

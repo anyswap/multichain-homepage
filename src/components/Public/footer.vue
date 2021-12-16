@@ -148,7 +148,7 @@ export default {
             {name: 'Github', url: this.$$.github},
             {name: 'Docs', url: this.$$.docUrl},
             {name: 'Brand Assets', url: 'https://github.com/anyswap/Brand-assets'},
-            {name: 'Careers', url: 'https://app.gitbook.com/o/85CsdnspCc6rRjuCwGHJ/s/Udcg2zIVro9DItOfrezt/c/Bhq0grPeUKIZ2LNheNvy/careers'},
+            {name: 'Careers', url: 'https://docs.multichain.org/careers'},
           ]
         },
         {
@@ -157,9 +157,9 @@ export default {
             {name: 'Listing', url: 'mailto:listing@anyswap.exchange'},
             {name: 'Support', url: 'https://anyswaphelp.zendesk.com/'},
             {name: 'Dev docs', url: 'https://docs.multichain.org/developer-guide'},
-            {name: 'Audit', url: 'https://docs.multichain.org/security/security-model'},
+            {name: 'Audit', url: 'https://github.com/anyswap/Anyswap-Audit'},
             {name: 'Bug bounty', url: 'https://docs.multichain.org/security/bug-bounty'},
-            {name: 'Contact', url: 'mailto:connect@anyswap.exchange'},
+            {name: 'Contact', url: 'mailto:contact@multichain.org'},
           ]
         },
         {
