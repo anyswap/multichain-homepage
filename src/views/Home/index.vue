@@ -84,8 +84,9 @@
             <li class="item flex-c">
               <div class="content">
                 <div class="pic">
-                  <img :src="item.logoUrl" :alt="item.name" v-if="item.logoUrl">
-                  <img :src="require(`../../assets/img/${item.symbol}.png`)" :alt="item.name" v-else>
+                  <!-- <img :src="item.logoUrl" :alt="item.name" v-if="item.logoUrl">
+                  <img :src="require(`../../assets/img/${item.symbol}.png`)" :alt="item.name" v-else> -->
+                  <Logo :logoName="item.name" :logoUrl="item.logoUrl"/>
                 </div>
                 <p class="p">{{item.name}}</p>
               </div>
@@ -166,7 +167,8 @@
             <!-- <li v-for="(item, index) in supportToken" :key="index" class="item flex-c"> -->
               <div class="content">
                 <div class="pic">
-                  <img :src="item.logoUrl" :alt="item.name">
+                  <!-- <img :src="item.logoUrl" :alt="item.name"> -->
+                  <Logo :logoName="item.symbol" :logoUrl="item.logoUrl"/>
                 </div>
                 <p class="p" :title="item.name">{{item.symbol}}</p>
               </div>
@@ -199,9 +201,10 @@
 // import Banner from '@v/Home/banner.vue'
 import HeaderWrapper from '@c/Public/header.vue'
 import FooterWrapper from '@c/Public/footer.vue'
+import Logo from '@c/Logo/index.vue'
 export default {
   name: 'Home',
-  components: {HeaderWrapper, FooterWrapper},
+  components: {HeaderWrapper, FooterWrapper, Logo},
   data () {
     return {
       bannerList: [
