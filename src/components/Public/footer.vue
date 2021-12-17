@@ -155,7 +155,7 @@ export default {
           title: 'Developers',
           list: [
             {name: 'Listing', url: 'mailto:listing@anyswap.exchange'},
-            {name: 'Support', url: 'https://anyswaphelp.zendesk.com/'},
+            {name: 'Support', url: 'https://multichain.zendesk.com/hc/en-us'},
             {name: 'Dev docs', url: 'https://docs.multichain.org/developer-guide'},
             {name: 'Audit', url: 'https://github.com/anyswap/Anyswap-Audit'},
             {name: 'Bug bounty', url: 'https://docs.multichain.org/security/bug-bounty'},
