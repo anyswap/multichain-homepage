@@ -221,7 +221,7 @@ export default {
         {logoUrl: require('../../assets/img/Spookyswap.png'), name: 'Spookyswap', url: 'https://spookyswap.finance/bridge'},
         {logoUrl: require('../../assets/img/spiritswap_logo.png'), name: 'Spiritswap', url: 'https://swap.spiritswap.finance/#/bridge'},
         {logoUrl: require('../../assets/img/Solarbeam.png'), name: 'Solarbeam', url: 'https://solarbeam.io/bridge'},
-        {logoUrl: require('../../assets/img/TPT.png'), name: 'Tokenpocket', url: 'https://tokenpocket.pro'},
+        {logoUrl: require('../../assets/img/TPT.jpg'), name: 'Tokenpocket', url: 'https://tokenpocket.pro'},
         {logoUrl: require('../../assets/img/XY.svg'), name: 'XY.FINANCE', url: 'https://xy.finance'},
         {logoUrl: require('../../assets/img/dopamineapp.svg'), name: 'Dopamineapp', url: 'https://dopamineapp.com'},
         {logoUrl: require('../../assets/img/li.png'), name: 'Li.Finance', url: 'https://li.finance'},
