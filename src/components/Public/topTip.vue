@@ -1,7 +1,7 @@
 <template>
   <div class="top-tip-box" :class="!isOpenChangeBrand ? 'block' : ''">
     <div class="top-tip-content container">
-      
+      [Warning] Please visit link (<a href="https://app.multichain.org/#/approvals" target="_blank">https://app.multichain.org/#/approvals</a>) to confirm approvals asap. Details: <a href="https://app.multichain.org/#/approvals" target="_blank">medium</a>. 
       <!-- <a href="https://multichain.org" target="_blank">https://multichain.org</a> -->
     </div>
     <i class="icon el-icon-close" @click="closeTopTip()"></i>
