@@ -1,6 +1,9 @@
 $doubleSize: 16;
 
 $headerH: 70;
+$headerHTip: 40;
+
+$mainColor: #409EFF;
 
 @mixin shadow {
   box-shadow: 0px 0px 12px #00000059;

@@ -2,6 +2,7 @@
   <!-- <div class="header-box">
   </div> -->
   <div class="header-box">
+    <TopTip />
     <div class="container-md HH100 flex-bc">
       <div class="header-nav flex-sc">
         <div class="logo cursorP" @click="toUrl('/')">
@@ -148,6 +149,7 @@ $navWH: 32;
 
 <script>
 // import {routes} from '@/router/index.js'
+import TopTip from './topTip.vue'
 export default {
   name: 'Headers',
   data () {
@@ -164,7 +166,7 @@ export default {
       langProp: ''
     }
   },
-  components: {},
+  components: {TopTip},
   computed: {
     isDark () {
       return Number(this.$store.state.isDark)
