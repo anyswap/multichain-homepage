@@ -2,7 +2,7 @@
   <!-- <div class="header-box">
   </div> -->
   <div class="header-box">
-    <TopTip />
+    <!-- <TopTip /> -->
     <div class="container-md HH100 flex-bc">
       <div class="header-nav flex-sc">
         <div class="logo cursorP" @click="toUrl('/')">

@@ -143,7 +143,7 @@ export default {
         {
           title: 'About',
           list: [
-            {name: 'Blog', url: 'https://anyswap.medium.com/'},
+            {name: 'Blog', url: 'https://multichainorg.medium.com/'},
             {name: 'FAQ', url: 'https://docs.multichain.org/faq'},
             {name: 'Github', url: this.$$.github},
             {name: 'Docs', url: this.$$.docUrl},
@@ -154,7 +154,7 @@ export default {
         {
           title: 'Developers',
           list: [
-            {name: 'Listing', url: 'mailto:listing@anyswap.exchange'},
+            {name: 'Listing', url: 'https://dard6erxu8t.typeform.com/to/C7RwF08A'},
             {name: 'Support', url: 'https://multichain.zendesk.com/hc/en-us'},
             {name: 'Dev docs', url: 'https://docs.multichain.org/developer-guide'},
             {name: 'Audit', url: 'https://github.com/anyswap/Anyswap-Audit'},
