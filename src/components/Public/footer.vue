@@ -143,7 +143,7 @@ export default {
         {
           title: 'About',
           list: [
-            {name: 'Blog', url: 'https://multichainorg.medium.com/'},
+            {name: 'Blog', url: 'https://medium.com/multichainorg'},
             {name: 'FAQ', url: 'https://docs.multichain.org/faq'},
             {name: 'Github', url: this.$$.github},
             {name: 'Docs', url: this.$$.docUrl},
