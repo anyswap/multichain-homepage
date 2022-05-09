@@ -148,8 +148,8 @@ export default {
             {name: 'FAQ', url: 'https://docs.multichain.org/faq'},
             // {name: 'Github', url: this.$$.github},
             {name: 'Brand Assets', url: 'https://github.com/anyswap/Brand-assets'},
-            {name: 'Multichain Annual Report 2021', url: 'https://drive.google.com/file/d/1gdkpldTjBXKV6H7Duu4_m3XmLTQGcHmg/view'},
             {name: 'Multichain Report Q1 2022', url: 'https://drive.google.com/file/d/1sempaU5Y_lR6UrgrgIsARULUt7cTTEBH/view'},
+            {name: 'Multichain Report 2021', url: 'https://drive.google.com/file/d/1gdkpldTjBXKV6H7Duu4_m3XmLTQGcHmg/view'},
             {name: 'Careers', url: 'https://docs.multichain.org/careers'},
           ]
         },
