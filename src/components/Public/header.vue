@@ -157,7 +157,8 @@ export default {
       activeIndex: '0',
       navList: [
         // {name: 'Home', url: '/', type: 'link'},
-        {name: 'MULTI', url: this.$$.enterApp + '/#/multi', type: 'outlink'},
+        // {name: 'MULTI', url: this.$$.enterApp + '/#/multi', type: 'outlink'},
+        {name: 'veMULTI', url: this.$$.enterApp + '/#/vest', type: 'outlink'},
         {name: 'Explorer', url: this.$$.explorerUrl, type: 'outlink'},
         {name: 'Docs', url: this.$$.docUrl, type: 'outlink'},
         {name: 'Github', url: this.$$.github, type: 'outlink'},

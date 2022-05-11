@@ -8,6 +8,6 @@ export default {
   telegram: 'https://t.me/anyswap',
   medium: 'https://medium.com/multichainorg',
   twitter: 'https://twitter.com/MultichainOrg',
-  coinmarketcap: 'https://coinmarketcap.com/currencies/anyswap/',
-  coingecko: 'https://www.coingecko.com/en/coins/anyswap'
+  coinmarketcap: 'https://coinmarketcap.com/currencies/multichain/',
+  coingecko: 'https://www.coingecko.com/en/coins/multichain'
 }
