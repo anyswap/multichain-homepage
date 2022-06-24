@@ -224,7 +224,7 @@ export default {
         {logoUrl: require('../../assets/img/TPT.jpg'), name: 'Tokenpocket', url: 'https://tokenpocket.pro'},
         {logoUrl: require('../../assets/img/XY.svg'), name: 'XY.FINANCE', url: 'https://xy.finance'},
         {logoUrl: require('../../assets/img/dopamineapp.svg'), name: 'Dopamineapp', url: 'https://dopamineapp.com'},
-        {logoUrl: require('../../assets/img/LIFI.png'), name: 'Li.FI', url: 'https://li.fi'},
+        {logoUrl: require('../../assets/img/LIFI.png'), name: 'LI.FI', url: 'https://li.fi'},
         {logoUrl: require('../../assets/img/movr.png'), name: 'Movr.network', url: 'http://movr.network/'},
       ],
       mulIntroduce: [
