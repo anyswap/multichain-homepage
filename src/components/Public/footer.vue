@@ -137,7 +137,8 @@ export default {
         {name: '', url: this.$$.twitter, logo: require('../../assets/img/twitter-white.svg')},
         {name: '', url: this.$$.github, logo: require('../../assets/img/github-white.png')},
         {name: '', url: this.$$.coinmarketcap, logo: require('../../assets/img/coinmarketcap-white.png')},
-        {name: '', url: this.$$.coingecko, logo: require('../../assets/img/coingecko-white.png')}
+        {name: '', url: this.$$.coingecko, logo: require('../../assets/img/coingecko-white.png')},
+        {name: '', url: this.$$.multidao, logo: require('../../assets/img/dao.png')},
       ],
       footerList: [
         {

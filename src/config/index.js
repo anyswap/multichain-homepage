@@ -9,5 +9,6 @@ export default {
   medium: 'https://medium.com/multichainorg',
   twitter: 'https://twitter.com/MultichainOrg',
   coinmarketcap: 'https://coinmarketcap.com/currencies/multichain/',
-  coingecko: 'https://www.coingecko.com/en/coins/multichain'
+  coingecko: 'https://www.coingecko.com/en/coins/multichain',
+  multidao: 'https://discord.gg/multidao',
 }
