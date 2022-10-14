@@ -148,7 +148,7 @@ export default {
             {name: 'Docs', url: this.$$.docUrl},
             {name: 'FAQ', url: 'https://docs.multichain.org/faq'},
             // {name: 'Github', url: this.$$.github},
-            {name: 'Brand Assets', url: 'https://github.com/anyswap/Brand-assets'},
+            {name: 'Brand Assets', url: 'https://github.com/anyswap/Brand-assets/tree/master/multichain'},
             {name: 'Multichain Report Q2 2022', url: 'https://drive.google.com/file/d/1AcAwdIeI3-ALD4KBRc9EQCXW9GnNfHZV/view'},
             {name: 'Multichain Report Q1 2022', url: 'https://drive.google.com/file/d/1tIjUsdncA2Hq-5DHeXXEfDjaee1usYnC/view'},
             {name: 'Multichain Report 2021', url: 'https://drive.google.com/file/d/1gdkpldTjBXKV6H7Duu4_m3XmLTQGcHmg/view'},
@@ -171,11 +171,13 @@ export default {
           title: 'Product',
           list: [
             {name: 'Router', url: this.$$.enterApp},
+            {name: 'anyCall', url: 'https://docs.multichain.org/developer-guide/anycall-v6'},
+            {name: 'fastMPC', url: 'https://multichainorg.medium.com/fastmpc-mainnet-goes-live-running-in-a-decentralized-way-99f9fe2956b8'},
             {name: 'Explorer', url: this.$$.explorerUrl},
             {name: 'Network', url: this.$$.explorerUrl + '/network'},
-            {name: 'Governance', url: 'https://vote.anyswap.exchange/'},
             {name: 'Dashboard', url: this.$$.explorerUrl + '/dashboard'},
             {name: 'Tools', url: this.$$.explorerUrl + '?tabparams=tools'},
+            {name: 'Governance', url: 'https://vote.anyswap.exchange/'},
           ]
         }
       ]

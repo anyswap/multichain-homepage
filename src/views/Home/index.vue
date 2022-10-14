@@ -5,8 +5,9 @@
       <div class="carousel-box-content">
         <div class="container-md carousel-bg">
           <el-carousel indicator-position="none" arrow="never" class="carousel-content">
-            <el-carousel-item v-for="(item, index) in bannerList" :key="index" class=" flex-c">
-              <div class="content">
+            <el-carousel-item v-for="(item, index) in bannerList" :key="index" class="flex-c">
+
+              <div class="content" v-if="item.type === 'content'">
                 <div class="carousel-col"></div>
                 <div class="carousel-info">
                   <h3 v-html="item.title"></h3>
@@ -17,6 +18,9 @@
                     <el-button type="primary" @click="openUrl($$.enterApp)" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button>
                   </div>
                 </div>
+              </div>
+              <div class="content" v-else-if="item.type === 'image'">
+                <a :href="item.url"><img :src="item.image" /></a>
               </div>
             </el-carousel-item>
           </el-carousel>
@@ -42,6 +46,28 @@
         </div>
       </div>
       <HeaderWrapper class="carousel-header-box"/>
+    </div>
+
+    <div class="mul-banner-box anycall">
+      <div class="container-md">
+        <div class="banner-anycall">
+          <a href="https://moralis.io/google-hackathon/" class="flex-bc img-box" target="__blank">
+            <img src="~@/assets/img/banner/anycall-left.png" class="img1" />
+            <img src="~@/assets/img/banner/anycall-right.png" class="img2" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mul-banner-box fastmpc">
+      <div class="container-md">
+        <div class="banner-anycall">
+          <a href="https://multichainorg.medium.com/fastmpc-mainnet-goes-live-running-in-a-decentralized-way-99f9fe2956b8" class="flex-bc img-box" target="__blank">
+            <img src="~@/assets/img/banner/fastmpc-left.png" class="img1" />
+            <img src="~@/assets/img/banner/fastmpc-right.png" class="img2" />
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="mul-introduce-box">
@@ -209,10 +235,21 @@ export default {
     return {
       bannerList: [
         {
+          type: 'content',
           title: 'Cross-Chain<br /><span class="bold">Router</span> Protocol',
           content: 'The Ultimate Router for Web3.0',
           content1: 'An infrastructure developed for arbitrary<br />cross-chain interactions.',
-        }
+        },
+        // {
+        //   type: 'image',
+        //   image: require('../../assets/img/banner/Anycall.png'),
+        //   url: 'https://moralis.io/google-hackathon/'
+        // },
+        // {
+        //   type: 'image',
+        //   image: require('../../assets/img/banner/fastmpc.png'),
+        //   url: 'https://multichainorg.medium.com/fastmpc-mainnet-goes-live-running-in-a-decentralized-way-99f9fe2956b8'
+        // }
       ],
       supportLeague: [
         {logoUrl: require('../../assets/img/mim.svg'), name: 'ABRACADABRA.MONEY', url: 'https://abracadabra.money/bridge'},
