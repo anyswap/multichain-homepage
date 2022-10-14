@@ -48,7 +48,7 @@
       <HeaderWrapper class="carousel-header-box"/>
     </div>
 
-    <div class="mul-banner-box anycall">
+    <div class="mul-banner-box anycall flex-c">
       <div class="container-md">
         <div class="banner-anycall">
           <a href="https://moralis.io/google-hackathon/" class="flex-bc img-box" target="__blank">
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class="mul-banner-box fastmpc">
+    <div class="mul-banner-box fastmpc flex-c">
       <div class="container-md">
         <div class="banner-anycall">
           <a href="https://multichainorg.medium.com/fastmpc-mainnet-goes-live-running-in-a-decentralized-way-99f9fe2956b8" class="flex-bc img-box" target="__blank">

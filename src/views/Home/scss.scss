@@ -249,6 +249,7 @@ $moreHeightSmall: 100;
     &.anycall {
       @include bg('anycallbg');
       padding: 80px 0 20px;
+      height: 100vh;
       .img-box {
         width: 100%;
         img {
