@@ -539,3 +539,38 @@ $moreHeightSmall: 100;
     }
   }
 }
+
+.fee-box {
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  .fee-content {
+    height: 100%;
+    width: 100%;
+    .el-carousel__container {
+      height: 100%;
+      width: 100%;
+      .el-carousel__item{
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .fee-list {
+    width: 100%;
+    height: 100%;
+    .fee-item {
+      .image {
+        width: 50%;
+        height: 100%;
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}

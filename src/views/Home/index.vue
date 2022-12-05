@@ -48,7 +48,7 @@
       <HeaderWrapper class="carousel-header-box"/>
     </div>
 
-    <div class="mul-banner-box anycall flex-c">
+    <!-- <div class="mul-banner-box anycall flex-c">
       <div class="container-md">
         <div class="banner-anycall">
           <a href="https://moralis.io/google-hackathon/" class="flex-bc img-box" target="__blank">
@@ -57,6 +57,18 @@
           </a>
         </div>
       </div>
+    </div> -->
+    <div class="fee-box">
+      <el-carousel indicator-position="none" arrow="always" class="fee-content" autoplay :interval="5000">
+        <el-carousel-item v-for="(item, index) in feeList" :key="index" class="flex-c">
+          <div :style="'background: ' + item.bgColor" class="fee-list flex-c">
+            <div class="flex-bc fee-item container-md">
+              <div class="image"><img :src="item.left" /></div>
+              <div class="image"><img :src="item.right" /></div>
+            </div>
+          </div>
+        </el-carousel-item>
+      </el-carousel>
     </div>
 
     <div class="mul-banner-box fastmpc flex-c">
@@ -266,11 +278,15 @@ export default {
       ],
       mulIntroduce: [
         {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
-        {icon: require('../../assets/img/Swap_icon.svg'), title: 'No-slippage Swap', content: "Multichain’s 1:1 swap enables users to perform 0 slippage transfers and eliminate the hidden cost associated with AMM."},
+        {icon: require('../../assets/img/Swap_icon.svg'), title: 'No-slippage Bridge', content: "Multichain’s 1:1 bridge enables users to perform 0 slippage transfers and eliminate the hidden cost associated with AMM."},
         {icon: require('../../assets/img/multichain_icon.svg'), title: 'Multichain Router', content: 'Multichain Router allows users to swap between any two chains freely. It reduces fees and makes it easier to move between chains.'},
       ],
       supportToken: [],
       supportTokenNum: 0,
+      feeList: [
+        {name: '', bgColor: 'linear-gradient(to right, #56008f, #2a25c9 , #30adff)', left: require('../../assets/img/feebanner/fee1-left.png'), right: require('../../assets/img/feebanner/fee1-right.png')},
+        {name: '', bgColor: 'linear-gradient(to right, #2b0058, #2a25c9 , #30adff)', left: require('../../assets/img/feebanner/fee2-left.png'), right: require('../../assets/img/feebanner/fee2-right.png')},
+      ]
     }
   },
   computed: {
