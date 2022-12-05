@@ -59,9 +59,9 @@
       </div>
     </div> -->
     <div class="fee-box">
-      <el-carousel indicator-position="none" arrow="always" class="fee-content" autoplay :interval="5000">
+      <el-carousel  arrow="always" class="fee-content" autoplay :interval="5000">
         <el-carousel-item v-for="(item, index) in feeList" :key="index" class="flex-c">
-          <div :style="'background: ' + item.bgColor" class="fee-list flex-c">
+          <div :style="'background: ' + (isDark ? '#21263E' : item.bgColor)" class="fee-list flex-c ">
             <div class="flex-bc fee-item container-md">
               <div class="image"><img :src="item.left" /></div>
               <div class="image"><img :src="item.right" /></div>
@@ -290,6 +290,9 @@ export default {
     }
   },
   computed: {
+    isDark () {
+      return this.$store.state.isDark
+    },
     chainInfo () {
       // console.log(this.$store.state.bridgeData.chainlist.data)
       const arr = []
@@ -362,6 +365,9 @@ export default {
   watch: {
     tokenInfo () {
       this.initToken()
+    },
+    isDark (cur,old) {
+      console.log(cur, old)
     }
   },
   mounted () {
