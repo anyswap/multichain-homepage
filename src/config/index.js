@@ -11,4 +11,5 @@ export default {
   coinmarketcap: 'https://coinmarketcap.com/currencies/multichain/',
   coingecko: 'https://www.coingecko.com/en/coins/multichain',
   multidao: 'https://discord.gg/sxqcWn7std',
+  anyCall: 'https://anycall.multichain.org/',
 }

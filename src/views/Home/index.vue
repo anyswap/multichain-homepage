@@ -48,20 +48,12 @@
       <HeaderWrapper class="carousel-header-box"/>
     </div>
 
-    <!-- <div class="mul-banner-box anycall flex-c">
-      <div class="container-md">
-        <div class="banner-anycall">
-          <a href="https://moralis.io/google-hackathon/" class="flex-bc img-box" target="__blank">
-            <img src="~@/assets/img/banner/anycall-left.png" class="img1" />
-            <img src="~@/assets/img/banner/anycall-right.png" class="img2" />
-          </a>
-        </div>
-      </div>
-    </div> -->
+
+
     <div class="fee-box">
       <el-carousel  arrow="always" class="fee-content" autoplay :interval="5000">
         <el-carousel-item v-for="(item, index) in feeList" :key="index" class="flex-c">
-          <div :style="'background: ' + (isDark ? '#21263E' : item.bgColor)" class="fee-list flex-c ">
+          <div :style="'background: ' + (isDark ? '#394358' : item.bgColor)" class="fee-list flex-c ">
             <div class="flex-bc fee-item container-md">
               <div class="image"><img :src="item.left" /></div>
               <div class="image"><img :src="item.right" /></div>
@@ -69,6 +61,17 @@
           </div>
         </el-carousel-item>
       </el-carousel>
+    </div>
+
+    <div class="mul-banner-box anycall flex-c">
+      <div class="container-md">
+        <div class="banner-anycall">
+          <a href="https://anycall.multichain.org/" class="flex-bc img-box" target="__blank">
+            <img src="~@/assets/img/banner/anycall-left.png" class="img1" />
+            <img src="~@/assets/img/banner/anycall-right.png" class="img2" />
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="mul-banner-box fastmpc flex-c">
