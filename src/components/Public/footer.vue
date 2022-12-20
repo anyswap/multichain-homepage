@@ -177,7 +177,7 @@ export default {
             {name: 'Network', url: this.$$.explorerUrl + '/#/network'},
             {name: 'Dashboard', url: this.$$.explorerUrl + '/#/dashboard'},
             {name: 'Tools', url: this.$$.explorerUrl + '/#/tools'},
-            {name: 'Governance', url: 'https://vote.anyswap.exchange/'},
+            {name: 'Governance', url: 'https://snapshot.org/#/multichaindao.eth/'},
           ]
         }
       ]
