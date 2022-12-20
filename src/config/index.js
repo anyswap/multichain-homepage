@@ -2,7 +2,7 @@ export default {
   bridgeApi: 'https://bridgeapi.anyswap.exchange',
   netapi: 'https://netapi.anyswap.net',
   enterApp: 'https://app.multichain.org',
-  explorerUrl: 'https://anyswap.net',
+  explorerUrl: 'https://scan.multichain.org',
   docUrl: 'https://docs.multichain.org/',
   github: 'https://github.com/anyswap',
   telegram: 'https://t.me/anyswap',

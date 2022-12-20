@@ -174,9 +174,9 @@ export default {
             {name: 'anyCall', url: 'https://docs.multichain.org/developer-guide/anycall-v6'},
             {name: 'fastMPC', url: 'https://multichainorg.medium.com/fastmpc-mainnet-goes-live-running-in-a-decentralized-way-99f9fe2956b8'},
             {name: 'Explorer', url: this.$$.explorerUrl},
-            {name: 'Network', url: this.$$.explorerUrl + '/network'},
-            {name: 'Dashboard', url: this.$$.explorerUrl + '/dashboard'},
-            {name: 'Tools', url: this.$$.explorerUrl + '?tabparams=tools'},
+            {name: 'Network', url: this.$$.explorerUrl + '/#/network'},
+            {name: 'Dashboard', url: this.$$.explorerUrl + '/#/dashboard'},
+            {name: 'Tools', url: this.$$.explorerUrl + '/#/tools'},
             {name: 'Governance', url: 'https://vote.anyswap.exchange/'},
           ]
         }
