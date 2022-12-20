@@ -31,7 +31,7 @@
             <div class="bridgeData-list">
               <el-row :gutter="10" class="">
                 <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6" v-for="(item, index) in bridgeData" :key="index">
-                  <div class="item cursorP" @click="openUrl($$.explorerUrl + '/dashboard')">
+                  <div class="item cursorP" @click="openUrl($$.explorerUrl + '/#/dashboard')">
                     <h3>
                       {{item.name}}
                     </h3>
@@ -218,7 +218,7 @@
         </el-row>
       </ul>
       <div class="token-More">
-        See all <span class="span cursorP" @click="openUrl($$.explorerUrl + '/tokens')">here</span>.
+        See all <span class="span cursorP" @click="openUrl($$.explorerUrl + '/#/tokens')">here</span>.
       </div>
       <div class="learn-more-btn">
         <el-button @click="openUrl('https://dard6erxu8t.typeform.com/to/C7RwF08A')" class="btn-more flex-c">
