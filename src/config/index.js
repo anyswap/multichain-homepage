@@ -1,5 +1,6 @@
 export default {
-  bridgeApi: 'https://bridgeapi.anyswap.exchange',
+  // bridgeApi: 'https://bridgeapi.anyswap.exchange',
+  bridgeApi: 'https://scanapi.multichain.org',
   netapi: 'https://netapi.anyswap.net',
   enterApp: 'https://app.multichain.org',
   explorerUrl: 'https://scan.multichain.org',
