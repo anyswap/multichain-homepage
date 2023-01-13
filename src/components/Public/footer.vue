@@ -154,7 +154,7 @@ export default {
             {name: 'Multichain Report 2021', url: 'https://drive.google.com/file/d/1gdkpldTjBXKV6H7Duu4_m3XmLTQGcHmg/view'},
             {name: 'Careers', url: 'https://docs.multichain.org/careers'},
             {name: 'anyCall Whitepaper', url: 'https://drive.google.com/file/d/1NFFFecAjStbGMyvJVDez3xmsGSHYvNYv/view?usp=sharing'},
-            {name: 'zkRouter', url: 'https://drive.google.com/file/d/1ibuHChcYcYCN6JelRAQPnM4rkaB9EgAM/view?usp=sharing'},
+            {name: 'zkRouter Whitepaper', url: 'https://drive.google.com/file/d/1ibuHChcYcYCN6JelRAQPnM4rkaB9EgAM/view?usp=sharing'},
           ]
         },
         {
