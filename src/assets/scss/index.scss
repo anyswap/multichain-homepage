@@ -1,4 +1,9 @@
 @import './theme.scss';
+
+html,body {
+  @include scrollbar-track-piece('scrollbarBg')
+}
+
 .contentBg {
   min-width:100%;
   min-height: 100%;
