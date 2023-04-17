@@ -277,7 +277,7 @@ export default {
         {logoUrl: require('../../assets/img/XY.svg'), name: 'XY.FINANCE', url: 'https://xy.finance'},
         {logoUrl: require('../../assets/img/dopamineapp.svg'), name: 'Dopamineapp', url: 'https://dopamineapp.com'},
         {logoUrl: require('../../assets/img/LIFI.png'), name: 'LI.FI', url: 'https://li.fi'},
-        {logoUrl: require('../../assets/img/movr.png'), name: 'Movr.network', url: 'http://movr.network/'},
+        {logoUrl: require('../../assets/img/Socket.svg'), name: 'Socket', url: 'http://movr.network/'},
       ],
       mulIntroduce: [
         {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},
