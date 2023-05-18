@@ -268,7 +268,8 @@ export default {
       ],
       supportLeague: [
         {logoUrl: require('../../assets/img/mim.svg'), name: 'ABRACADABRA.MONEY', url: 'https://abracadabra.money/bridge'},
-        {logoUrl: require('../../assets/img/MUL.png'), name: 'Multichain.xyz', url: 'https://multichain.xyz/'},
+        // {logoUrl: require('../../assets/img/MUL.png'), name: 'Multichain.xyz', url: 'https://multichain.xyz/'},
+        {logoUrl: 'https://i.esdrop.com/d/f/SzUwPFr0Tc/OcK2SYI4qh.svg', name: 'Rango', url: 'https://app.rango.exchange/swap/BSC.BNB/AVAX_CCHAIN.AVAX/'},
         // {logoUrl: require('../../assets/img/NRV.svg'), name: 'Nerve.fi', url: 'https://app.nerve.fi/bridge'},
         {logoUrl: require('../../assets/img/Spookyswap.png'), name: 'Spookyswap', url: 'https://spookyswap.finance/bridge'},
         {logoUrl: require('../../assets/img/spiritswap_logo.png'), name: 'Spiritswap', url: 'https://swap.spiritswap.finance/#/bridge'},
@@ -277,7 +278,7 @@ export default {
         {logoUrl: require('../../assets/img/XY.svg'), name: 'XY.FINANCE', url: 'https://xy.finance'},
         {logoUrl: require('../../assets/img/dopamineapp.svg'), name: 'Dopamineapp', url: 'https://dopamineapp.com'},
         {logoUrl: require('../../assets/img/LIFI.png'), name: 'LI.FI', url: 'https://li.fi'},
-        {logoUrl: require('../../assets/img/Socket.svg'), name: 'Socket', url: 'http://movr.network/'},
+        {logoUrl: require('../../assets/img/Socket.svg'), name: 'Socket', url: 'https://socket.tech/'},
       ],
       mulIntroduce: [
         {icon: require('../../assets/img/Lock_icon.svg'), title: 'Non-custodial + MPC', content: 'MPC, the powerful symbol of decentralization, processes Multichain cross-chain bridging and smart contract methods on other chains.'},

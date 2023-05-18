@@ -6,7 +6,7 @@
           <div class="footer-item-info">
             <div class="logo"><img src="~@/assets/logo-white.png" alt="logo"/></div>
             <div class="content">
-              © 2021 Multichain. All rights reserved.
+              © {{new Date().getFullYear()}} Multichain. All rights reserved.
             </div>
             <ul class="list flex-sc">
               <li class="item" v-for="(item, index) in network" :key="index">
