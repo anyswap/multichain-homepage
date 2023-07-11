@@ -15,7 +15,8 @@
                   <!-- <p class="p2" v-html="item.content1"></p> -->
                   <div class="carousel-btn flex-sc">
                     <el-button @click="openUrl($$.explorerUrl)" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Explorer</el-button>
-                    <el-button type="primary" @click="openUrl($$.enterApp)" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button>
+                    <!-- <el-button type="primary" @click="openUrl($$.enterApp)" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-info ml-20">Enter App</el-button> -->
+                    <el-button type="info" @click="close()" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0  ml-20" :style="'font-weight: bold;'">Enter App</el-button>
                   </div>
                 </div>
               </div>
@@ -379,6 +380,13 @@ export default {
     this.initToken()
   },
   methods: {
+    close() {
+      this.$message({
+          message: 'The Multichain service stopped currently, and all bridge transactions will be stuck on the source chains. <br /> <br />There is no confirmed resume time. <br /><br /> Please don’t use the Multichain bridging service temporarily.',
+          type: 'warning',
+          dangerouslyUseHTMLString: true,
+        });
+      },
     openUrl (url) {
       window.open(url)
     },

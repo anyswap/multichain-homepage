@@ -23,7 +23,8 @@
           <img src="~@/assets/img/day.png" v-if="isDark"/>
           <img src="~@/assets/img/night.png" v-else/>
         </div>
-        <el-button @click="openUrl(appUrl)" type="primary" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Enter App</el-button>
+        <el-button @click="close()" type="info" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 " :style="'font-weight: bold;'">Enter App</el-button>
+        <!-- <el-button @click="openUrl(appUrl)" type="primary" class="btn-radius10 IH35 font16 plr15 pt-0 pb-0 btn-default">Enter App</el-button> -->
         <div class="nav-menu flex-c hidden-md-and-up">
           <!-- <i class="el-icon-s-operation"></i> -->
           <el-dropdown trigger="click" @command="handleCommand">
@@ -188,6 +189,13 @@ export default {
     this.changeNavList()
   },
   methods: {
+    close() {
+        this.$message({
+          message: 'The Multichain service stopped currently, and all bridge transactions will be stuck on the source chains. <br /> <br />There is no confirmed resume time. <br /><br /> Please don’t use the Multichain bridging service temporarily.',
+          type: 'warning',
+          dangerouslyUseHTMLString: true,
+        });
+      },
     openUrl (url) {
       window.open(url)
     },
