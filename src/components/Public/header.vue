@@ -191,7 +191,7 @@ export default {
   methods: {
     close() {
         this.$message({
-          message: 'The Multichain service stopped currently, and all bridge transactions will be stuck on the source chains. <br /> <br />There is no confirmed resume time. <br /><br /> Please don’t use the Multichain bridging service temporarily.',
+          message: 'The Multichain service stopped currently, and all bridge transactions will be stuck on the source chains. <br /> <br />There is no confirmed resume time. <br /><br /> Please don\'t use the Multichain bridging service temporarily.',
           type: 'warning',
           dangerouslyUseHTMLString: true,
         });
